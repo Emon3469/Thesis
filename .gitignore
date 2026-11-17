@@ -43,3 +43,8 @@ __pycache__/
 .claude/
 /eval/mini_kaggle_output/mini_results/per_query/
 /eval/mini_kaggle_output/mini_results/banglish_cross_script.csv
+
+# ---- presentation build artefacts
+/presentation/build/node_modules/
+/presentation/build/pylib/
+/presentation/build/render/
