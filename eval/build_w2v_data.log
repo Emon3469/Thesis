@@ -1,0 +1,18 @@
+news pool Economy_40k.csv: 2210
+news pool Education_40k.csv: 2210
+news pool Entertainment_40k.csv: 2210
+news pool International_40k.csv: 2210
+news pool National_40k.csv: 2210
+news pool politics_40k.csv: 2210
+news pool Sports_40k.csv: 2210
+split               conf   dev
+task                          
+hate_binary_2       2250  2250
+news_topic_7        5950  5950
+review_sentiment_3  2250  2250
+social_sentiment_3  1500  1500 
+total 23900
+mini datasets: 10 10 20 | news topics: [np.str_('economy'), np.str_('education'), np.str_('entertainment'), np.str_('national'), np.str_('sports')]
+news corpus: 271,910 docs, 65,324,912 tokens, 11,984 eval texts excluded
+informal corpus: 149,423 docs, 3,192,884 tokens, 13,616 eval texts excluded
+{'place': 58, 'person': 72, 'cardinal': 31, 'ordinal': 20, 'date': 31}

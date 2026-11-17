@@ -1,0 +1,39 @@
+{
+  "minutes": 2.11,
+  "device": "cuda",
+  "smoke": false,
+  "plan": {
+    "domain_1": [
+      "BanglaBERT"
+    ],
+    "domain_2": [
+      "BanglaSBERT"
+    ],
+    "merged_dataset": [
+      "BanglaBERT",
+      "BanglaSBERT",
+      "mE5-base"
+    ]
+  },
+  "domain_model": {
+    "D1": "BanglaBERT",
+    "D2": "BanglaSBERT"
+  },
+  "max_len": {
+    "D1_formal_news": 256,
+    "D2_informal_ugc": 128
+  },
+  "seed": 42,
+  "n_perm": 10000,
+  "timing_s": {
+    "BanglaBERT": 34.271388187000014,
+    "BanglaSBERT": 34.64378085799996,
+    "mE5-base": 19.91552478899996
+  },
+  "model_sha": {
+    "BanglaBERT": "9ce791f330578f50da6bc52b54205166fb5d1c8c",
+    "BanglaSBERT": "ab250a2c767638562cd3caa8c0017b106a481755",
+    "mE5-base": "d128750597153bb5987e10b1c3493a34e5a4502a"
+  },
+  "torch": "2.11.0+cu130"
+}

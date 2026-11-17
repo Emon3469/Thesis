@@ -1,0 +1,13 @@
+{
+  "id": "emon3469/bangla-mini-5-experiments",
+  "title": "bangla-mini-5-experiments",
+  "code_file": "bangla-mini-5-experiments.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": ["emon3469/bangla-mini-3-datasets"],
+  "competition_sources": [],
+  "kernel_sources": []
+}

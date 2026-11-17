@@ -1,0 +1,13 @@
+{
+  "id": "KAGGLE_USERNAME/bangla-2domain-embedding-eval",
+  "title": "bangla-2domain-embedding-eval",
+  "code_file": "bangla-2domain-embedding-eval.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": ["KAGGLE_USERNAME/bangla-2domain-eval-set"],
+  "competition_sources": [],
+  "kernel_sources": []
+}

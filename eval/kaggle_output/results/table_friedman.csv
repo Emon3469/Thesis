@@ -1,0 +1,6 @@
+model,avg_rank
+fastText-cc.bn,2.225
+mE5-base,2.375
+BanglaBERT,3.325
+BanglaSBERT,3.45
+TFIDF-char-SVD,3.625

@@ -1,0 +1,12 @@
+{
+  "T3_max_abs_error_conc_identity": 4.440892098500626e-16,
+  "T4_identity_error": 1.6653345369377348e-16,
+  "T4_cross_mean": 0.025187792485814403,
+  "T4_cross_sd": 0.03209690255584049,
+  "T4_signal_sd": 0.176211099397861,
+  "T4_noise_to_signal_variance": 0.03317872752541659,
+  "T4_corr_cross_signal": -0.1010801702717999,
+  "T5_mean_sq_norm_A": 1.0,
+  "T5_mean_sq_norm_AB": 2.0,
+  "T5_radius_ratio": 1.4142135623730951
+}

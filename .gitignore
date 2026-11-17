@@ -1,0 +1,45 @@
+# ---- raw third-party datasets and cloned repositories (not redistributed; see README "Data sources")
+/Bengali Hate Speech Dataset/
+/bengali-hate-speech-dataset/
+/Potrika & BARD  Soham News Datasets/
+/banglabert-master/
+/Bengali-Word2Vec-on-Bangla-News-Dataset-main/
+/Word-Analogy-Bangla-main/
+/eval_resources/
+/kaggle_output/
+
+# ---- model weights and large binaries (too large for GitHub; rebuilt by the notebooks)
+/models/**
+!/models/merged_w2v_T_conc/
+!/models/merged_w2v_T_conc/README.md
+*.npy
+*.npz
+*.bin
+*.bz2
+*.gz
+*.zip
+*.model
+*.pkl
+*.parquet
+
+# ---- built evaluation data (contains dataset texts; rebuilt by eval/build_w2v_data.py)
+/eval/w2v_kaggle_dataset/
+/eval/kaggle_dataset/
+/eval/mini_kaggle_dataset/
+/eval/mini/
+/eval/w2v_output/w2v_results/mini_*.csv
+/eval/conf_output/conf_results/conf_labels.csv
+
+# ---- downloaded model word lists, temporary and smoke-test output
+*.words.txt
+/eval/w2v_tmp/
+/eval/joblib_tmp/
+/eval/*_smoke/
+/eval/results_smoke/
+/eval/*smoke.log
+/eval/preeval_run.err
+__pycache__/
+.ipynb_checkpoints/
+.claude/
+/eval/mini_kaggle_output/mini_results/per_query/
+/eval/mini_kaggle_output/mini_results/banglish_cross_script.csv

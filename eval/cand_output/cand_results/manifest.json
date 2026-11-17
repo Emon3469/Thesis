@@ -1,0 +1,58 @@
+{
+  "device": "cuda",
+  "minutes": 5.79,
+  "models": {
+    "BanglaBERT-large": {
+      "kind": "hf_mean",
+      "repo": "csebuetnlp/banglabert_large",
+      "bn_norm": true,
+      "role": "D1 contextual (formal)",
+      "sha": "a64fb146d81ec4d7f8838b85e084b0c6a325a22f"
+    },
+    "mE5-large": {
+      "kind": "st",
+      "repo": "intfloat/multilingual-e5-large",
+      "prefix": "query: ",
+      "role": "general multilingual",
+      "sha": "3d7cfbdacd47fdda877c5cd8a79fbcc4f2a574f3"
+    },
+    "BnEmbed-e5s-banglish": {
+      "kind": "st",
+      "repo": "kazalbrur/bangla-embed-e5-small-banglish",
+      "prefix": "query: ",
+      "role": "D2 / Banglish",
+      "sha": "388b11b5f77b481e7821face58f741196bdd166a"
+    },
+    "BnEmbed-e5s": {
+      "kind": "st",
+      "repo": "kazalbrur/bangla-embed-e5-small",
+      "prefix": "query: ",
+      "role": "Bangla native",
+      "sha": "fbb3febf9e32cc10138b9637dcecaf111402f58e"
+    },
+    "L3Cube-BnSBERT": {
+      "kind": "st",
+      "repo": "l3cube-pune/bengali-sentence-similarity-sbert",
+      "role": "Bangla STS",
+      "sha": "3af011cee9743eee4034904a97a47a769258d5b8"
+    },
+    "bnlp-word2vec": {
+      "kind": "w2v",
+      "repo": "sagorsarker/bangla_word2vec",
+      "file": "bangla_word2vec_gen4.zip",
+      "role": "static (wiki)",
+      "sha": "c16ac246f357efd48ec602c6dabd059198b79f0f"
+    }
+  },
+  "timing_s": {
+    "BanglaBERT-large": 70.51030328000002,
+    "mE5-large": 88.47254088200003,
+    "BnEmbed-e5s-banglish": 30.97386327999999,
+    "BnEmbed-e5s": 36.28868575900003,
+    "L3Cube-BnSBERT": 40.01289799699998,
+    "bnlp-word2vec": 15.011987142000066
+  },
+  "failed": {},
+  "st_version": "6.3.0",
+  "torch": "2.11.0+cu130"
+}

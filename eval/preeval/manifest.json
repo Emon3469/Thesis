@@ -1,0 +1,62 @@
+{
+  "minutes": 19.88,
+  "sources": {
+    "BanglaBERT": 768,
+    "BanglaSBERT": 768,
+    "fastText-cc.bn": 300,
+    "mE5-base": 768,
+    "TFIDF-char-SVD": 300,
+    "BanglaBERT-large": 1024,
+    "BnEmbed-e5s-banglish": 1024,
+    "BnEmbed-e5s": 1024,
+    "bnlp-word2vec": 100,
+    "L3Cube-BnSBERT": 768,
+    "mE5-large": 1024
+  },
+  "best_D1": "mE5-large",
+  "best_D2": "L3Cube-BnSBERT",
+  "best_overall": "mE5-base",
+  "selected": {
+    "srcs": [
+      "mE5-base",
+      "fastText-cc.bn"
+    ],
+    "method": "avg_l2",
+    "alpha": 0.5
+  },
+  "success": false,
+  "C_boundary_share": 0.21818181818181817,
+  "Cs": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "seed": 42,
+  "n_boot": 2000,
+  "label_permutation_f1": {
+    "news_topic_7": 0.14238122086559932,
+    "review_sentiment_3": 0.3889192122615171,
+    "social_sentiment_3": 0.27684848484848484,
+    "hate_binary_2": 0.47264979243966054
+  },
+  "dimension_control": [
+    {
+      "srcs": "mE5-base+L3Cube-BnSBERT",
+      "method": "conc_noise",
+      "alpha": NaN,
+      "D1": 0.8586224558262284,
+      "D2": 0.5946512865449268,
+      "kNN_D1": 0.8451759212035314,
+      "kNN_D2": 0.5733565897401417,
+      "Overall": 0.7266368711855776,
+      "kNN_Overall": 0.7092662554718365,
+      "news_topic_7": 0.8586224558262284,
+      "review_sentiment_3": 0.5194696486706323,
+      "social_sentiment_3": 0.48875958659325797,
+      "hate_binary_2": 0.7757246243708902
+    }
+  ]
+}

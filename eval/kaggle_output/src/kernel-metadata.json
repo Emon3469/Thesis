@@ -1,0 +1,21 @@
+{
+  "id": "emon3469/notebook85fb1b3325",
+  "id_no": 145262261,
+  "title": "notebook85fb1b3325",
+  "code_file": "notebook85fb1b3325.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [
+    "emon3469/bangla-2-domain-embedding-eval-set"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-images/python@sha256:0717e81990be591f8c5f98f033d29ab23e9ffde057e5b3a6bd4371f93969e962",
+  "machine_shape": "NvidiaTeslaT4"
+}

@@ -1,0 +1,43 @@
+[{"stream_name":"stderr","time":14.340354082,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":14.340458012,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":14.340465962,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":14.340471414,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":15.351417948,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":15.351456266,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":15.351463186,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":15.351467056,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":22.943127985,"data":"data: /kaggle/input/datasets/emon3469/bangla-w2v-preeval-data | frozen models: /kaggle/input/notebooks/emon3469/bangla-w2v-merge/merge_results/models | SMOKE: False\n"}
+,{"stream_name":"stdout","time":24.884844424,"data":"domain           task              \n"}
+,{"stream_name":"stdout","time":24.884883542,"data":"D1_formal_news   news_topic_7          5950\n"}
+,{"stream_name":"stdout","time":24.884887938,"data":"D2_informal_ugc  hate_binary_2         2250\n"}
+,{"stream_name":"stdout","time":24.884891379,"data":"                 review_sentiment_3    2250\n"}
+,{"stream_name":"stdout","time":24.884894597,"data":"                 social_sentiment_3    1500\n"}
+,{"stream_name":"stdout","time":24.884897891,"data":"dtype: int64 \n"}
+,{"stream_name":"stdout","time":24.884901516,"data":"CONF texts 11,950 | DEV texts 11,950 | distinct CONF tokens 93,833\n"}
+,{"stream_name":"stdout","time":28.696697355,"data":"   T: CONC: frozen file selected_pure_w2v.f16.npy md5 ok, 273,531 x 900, rows used 73,918\n"}
+,{"stream_name":"stdout","time":33.975155467,"data":"   X: CONC: frozen file selected_extended.f16.npy md5 ok, 354,843 x 1200, rows used 80,454\n"}
+,{"stream_name":"stdout","time":35.906335107,"data":"   News-W2V: frozen file News-W2V.f16.npy md5 ok, 187,686 x 300, rows used 187,686\n"}
+,{"stream_name":"stdout","time":36.748136554,"data":"   Informal-W2V: frozen file Informal-W2V.f16.npy md5 ok, 32,910 x 300, rows used 32,910\n"}
+,{"stream_name":"stdout","time":45.568049224,"data":"   downloaded bn_300_2_sg_wxd.csv.bz2 in 9s\n"}
+,{"stream_name":"stdout","time":168.846676977,"data":"   downloaded cc.bn.300.vec.gz in 61s\n"}
+,{"stream_name":"stdout","time":206.576678546,"data":"{'T: CONC': 73918, 'X: CONC': 80454, 'News-W2V': 187686, 'Informal-W2V': 32910, 'Subs2vec-w2': 54891, 'fastText-cc.bn': 76630, 'Q: CONC (exploratory)': 71805} | elapsed 3.2 min\n"}
+,{"stream_name":"stdout","time":237.411271903,"data":"T: CONC                  dim  900  D1 0.8840  D2 0.6595  Overall 0.7717  30s\n"}
+,{"stream_name":"stdout","time":278.635526741,"data":"X: CONC                  dim 1200  D1 0.8923  D2 0.6644  Overall 0.7784  41s\n"}
+,{"stream_name":"stdout","time":291.150161493,"data":"News-W2V                 dim  300  D1 0.8791  D2 0.6162  Overall 0.7477  13s\n"}
+,{"stream_name":"stdout","time":303.518239229,"data":"Informal-W2V             dim  300  D1 0.8073  D2 0.6579  Overall 0.7326  12s\n"}
+,{"stream_name":"stdout","time":315.930010003,"data":"Subs2vec-w2              dim  300  D1 0.8656  D2 0.6206  Overall 0.7431  12s\n"}
+,{"stream_name":"stdout","time":328.157200802,"data":"fastText-cc.bn           dim  300  D1 0.8815  D2 0.6474  Overall 0.7644  12s\n"}
+,{"stream_name":"stdout","time":347.238025352,"data":"Q: CONC (exploratory)    dim  600  D1 0.8797  D2 0.6585  Overall 0.7691  19s\n"}
+,{"stream_name":"stdout","time":347.915334417,"data":"CONFIRMED (all three Holm-adjusted p \u003c 0.05): True\n"}
+,{"stream_name":"stdout","time":348.313584474,"data":"DONE in 5.5 min -\u003e /kaggle/working/conf_results\n"}
+,{"stream_name":"stderr","time":352.521607366,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":352.521650442,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":352.825751784,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":352.825788427,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":353.897142071,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":354.002646874,"data":"[NbConvertApp] Writing 73110 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":357.388178079,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":358.220752945,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":358.220781995,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":358.22105615,"data":"[NbConvertApp] Writing 386172 bytes to __results__.html\n"}
+]

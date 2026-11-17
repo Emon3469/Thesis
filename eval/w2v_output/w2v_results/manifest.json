@@ -1,0 +1,116 @@
+{
+  "minutes": 76.3,
+  "smoke": false,
+  "w2v_settings": {
+    "vector_size": 300,
+    "window": 4,
+    "sg": 1,
+    "min_count": 5,
+    "negative": 10,
+    "epochs": 5,
+    "seed": 42,
+    "workers": 4
+  },
+  "topk_search": 200000,
+  "models": {
+    "News-W2V": {
+      "kind": "trained word2vec",
+      "corpus": "news_corpus.txt.gz",
+      "vector_size": 300,
+      "window": 4,
+      "sg": 1,
+      "min_count": 5,
+      "negative": 10,
+      "epochs": 5,
+      "seed": 42,
+      "workers": 4,
+      "train_seconds": 2273,
+      "corpus_words": 65324912,
+      "kept": 187686,
+      "full_vocab": 187686
+    },
+    "Informal-W2V": {
+      "kind": "trained word2vec",
+      "corpus": "informal_corpus.txt.gz",
+      "vector_size": 300,
+      "window": 4,
+      "sg": 1,
+      "min_count": 5,
+      "negative": 10,
+      "epochs": 5,
+      "seed": 42,
+      "workers": 4,
+      "train_seconds": 84,
+      "corpus_words": 3192884,
+      "kept": 32910,
+      "full_vocab": 32910
+    },
+    "Subs2vec-w1": {
+      "kind": "subs2vec (Zenodo 22230710)",
+      "file": "bn_300_1_sg_wxd.csv.bz2",
+      "md5_ok": true,
+      "kept": 177376,
+      "full_vocab": 177376
+    },
+    "Subs2vec-w2": {
+      "kind": "subs2vec (Zenodo 22230710)",
+      "file": "bn_300_2_sg_wxd.csv.bz2",
+      "md5_ok": true,
+      "kept": 177376,
+      "full_vocab": 177376
+    },
+    "Subs2vec-w3": {
+      "kind": "subs2vec (Zenodo 22230710)",
+      "file": "bn_300_3_sg_wxd.csv.bz2",
+      "md5_ok": true,
+      "kept": 177376,
+      "full_vocab": 177376
+    },
+    "Subs2vec-w4": {
+      "kind": "subs2vec (Zenodo 22230710)",
+      "file": "bn_300_4_sg_wxd.csv.bz2",
+      "md5_ok": true,
+      "kept": 177376,
+      "full_vocab": 177376
+    },
+    "Subs2vec-w5": {
+      "kind": "subs2vec (Zenodo 22230710)",
+      "file": "bn_300_5_sg_wxd.csv.bz2",
+      "md5_ok": true,
+      "kept": 177376,
+      "full_vocab": 177376
+    },
+    "Subs2vec-w6": {
+      "kind": "subs2vec (Zenodo 22230710)",
+      "file": "bn_300_6_sg_wxd.csv.bz2",
+      "md5_ok": true,
+      "kept": 177376,
+      "full_vocab": 177376
+    },
+    "fastText-cc.bn": {
+      "kind": "fastText Common Crawl .vec (no subwords)",
+      "kept": 234474,
+      "full_vocab": 1468578
+    }
+  },
+  "best_subs": "Subs2vec-w2",
+  "best_D1": "fastText-cc.bn",
+  "best_D2": "Informal-W2V",
+  "pairs": {
+    "planned (News-W2V + best Subs2vec)": [
+      "News-W2V",
+      "Subs2vec-w2"
+    ],
+    "specialist (best D1 + best D2)": [
+      "fastText-cc.bn",
+      "Informal-W2V"
+    ]
+  },
+  "mini_models": [
+    "News-W2V",
+    "Subs2vec-w2",
+    "fastText-cc.bn"
+  ],
+  "numpy": "2.1.3",
+  "gensim": "4.4.0"
+}

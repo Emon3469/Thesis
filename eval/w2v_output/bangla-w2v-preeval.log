@@ -1,0 +1,56 @@
+[{"stream_name":"stderr","time":7.639027764,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.639078964,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.639108144,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.639115894,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.241852774,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.241890034,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.241893474,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.241895844,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":27.029396337,"data":"data: /kaggle/input/datasets/emon3469/bangla-w2v-preeval-data | cpus: 4 | SMOKE: False\n"}
+,{"stream_name":"stdout","time":29.270628107,"data":"split               conf   dev\n"}
+,{"stream_name":"stdout","time":29.270656027,"data":"task                          \n"}
+,{"stream_name":"stdout","time":29.270660347,"data":"hate_binary_2       2250  2250\n"}
+,{"stream_name":"stdout","time":29.270663718,"data":"news_topic_7        5950  5950\n"}
+,{"stream_name":"stdout","time":29.270666858,"data":"review_sentiment_3  2250  2250\n"}
+,{"stream_name":"stdout","time":29.270669807,"data":"social_sentiment_3  1500  1500 \n"}
+,{"stream_name":"stdout","time":29.270672938,"data":"analogy files: 21 | questions: 27272 | needed words: 139842\n"}
+,{"stream_name":"stdout","time":2303.97175231,"data":"News-W2V: vocab 187,686, corpus 65,324,912 words, 2274s\n"}
+,{"stream_name":"stdout","time":2388.327345642,"data":"Informal-W2V: vocab 32,910, corpus 3,192,884 words, 84s\n"}
+,{"stream_name":"stdout","time":2489.213364657,"data":"   downloaded bn_300_1_sg_wxd.csv.bz2 in 101s\n"}
+,{"stream_name":"stdout","time":2528.834729586,"data":"Subs2vec-w1: kept 177,376 of 177,376 words, md5 OK, 141s\n"}
+,{"stream_name":"stdout","time":2605.581719124,"data":"   downloaded bn_300_2_sg_wxd.csv.bz2 in 77s\n"}
+,{"stream_name":"stdout","time":2645.021580939,"data":"Subs2vec-w2: kept 177,376 of 177,376 words, md5 OK, 116s\n"}
+,{"stream_name":"stdout","time":2994.326181154,"data":"   downloaded bn_300_3_sg_wxd.csv.bz2 in 349s\n"}
+,{"stream_name":"stdout","time":3033.512696166,"data":"Subs2vec-w3: kept 177,376 of 177,376 words, md5 OK, 388s\n"}
+,{"stream_name":"stdout","time":3386.236560942,"data":"   downloaded bn_300_4_sg_wxd.csv.bz2 in 353s\n"}
+,{"stream_name":"stdout","time":3425.983396771,"data":"Subs2vec-w4: kept 177,376 of 177,376 words, md5 OK, 392s\n"}
+,{"stream_name":"stdout","time":3847.444630684,"data":"   downloaded bn_300_5_sg_wxd.csv.bz2 in 421s\n"}
+,{"stream_name":"stdout","time":3886.892246346,"data":"Subs2vec-w5: kept 177,376 of 177,376 words, md5 OK, 461s\n"}
+,{"stream_name":"stdout","time":4091.490859388,"data":"   downloaded bn_300_6_sg_wxd.csv.bz2 in 205s\n"}
+,{"stream_name":"stdout","time":4131.087374393,"data":"Subs2vec-w6: kept 177,376 of 177,376 words, md5 OK, 244s\n"}
+,{"stream_name":"stdout","time":4161.960864718,"data":"   downloaded cc.bn.300.vec.gz in 31s\n"}
+,{"stream_name":"stdout","time":4193.368672873,"data":"fastText-cc.bn: kept 234,474 of 1,468,578\n"}
+,{"stream_name":"stdout","time":4193.368715703,"data":"models: ['News-W2V', 'Informal-W2V', 'Subs2vec-w1', 'Subs2vec-w2', 'Subs2vec-w3', 'Subs2vec-w4', 'Subs2vec-w5', 'Subs2vec-w6', 'fastText-cc.bn'] | elapsed 69.7 min\n"}
+,{"stream_name":"stdout","time":4219.231032299,"data":"News-W2V         D1 0.876  D2 0.620  analogy 0.060  simAUC 0.865  cov 0.985/0.912  25s\n"}
+,{"stream_name":"stdout","time":4232.175302386,"data":"Informal-W2V     D1 0.814  D2 0.647  analogy 0.008  simAUC 0.697  cov 0.839/0.914  13s\n"}
+,{"stream_name":"stdout","time":4258.276448807,"data":"Subs2vec-w1      D1 0.853  D2 0.620  analogy 0.046  simAUC 0.840  cov 0.960/0.915  26s\n"}
+,{"stream_name":"stdout","time":4284.662707184,"data":"Subs2vec-w2      D1 0.859  D2 0.625  analogy 0.059  simAUC 0.848  cov 0.960/0.915  26s\n"}
+,{"stream_name":"stdout","time":4310.779630792,"data":"Subs2vec-w3      D1 0.867  D2 0.625  analogy 0.066  simAUC 0.849  cov 0.960/0.915  26s\n"}
+,{"stream_name":"stdout","time":4336.751930582,"data":"Subs2vec-w4      D1 0.864  D2 0.621  analogy 0.067  simAUC 0.855  cov 0.960/0.915  26s\n"}
+,{"stream_name":"stdout","time":4362.93800779,"data":"Subs2vec-w5      D1 0.866  D2 0.619  analogy 0.065  simAUC 0.854  cov 0.960/0.915  26s\n"}
+,{"stream_name":"stdout","time":4389.300652795,"data":"Subs2vec-w6      D1 0.869  D2 0.620  analogy 0.063  simAUC 0.848  cov 0.960/0.915  26s\n"}
+,{"stream_name":"stdout","time":4416.907632693,"data":"fastText-cc.bn   D1 0.879  D2 0.645  analogy 0.076  simAUC 0.836  cov 0.986/0.961  28s\n"}
+,{"stream_name":"stdout","time":4416.932661363,"data":"best Subs2vec window: Subs2vec-w2 | best D1: fastText-cc.bn | best D2 (other): Informal-W2V\n"}
+,{"stream_name":"stdout","time":4416.932686463,"data":"pairs to check: {'planned (News-W2V + best Subs2vec)': ('News-W2V', 'Subs2vec-w2'), 'specialist (best D1 + best D2)': ('fastText-cc.bn', 'Informal-W2V')}\n"}
+,{"stream_name":"stdout","time":4584.578647554,"data":"DONE in 76.3 min -\u003e /kaggle/working/w2v_results\n"}
+,{"stream_name":"stderr","time":4589.7971613,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":4589.797203289,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":4589.95170206,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":4589.95174186,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":4590.643704662,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":4590.720535983,"data":"[NbConvertApp] Writing 157662 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":4593.14518383,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":4593.777659212,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":4593.777703312,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":4593.777950782,"data":"[NbConvertApp] Writing 476993 bytes to __results__.html\n"}
+]

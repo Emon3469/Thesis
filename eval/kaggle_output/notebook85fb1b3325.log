@@ -1,0 +1,84 @@
+[{"stream_name":"stderr","time":6.473167983,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.473211985,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.473216356,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.473218902,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.028685977,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.028714671,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.028719003,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.028722687,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":27.11419918,"data":"python 3.13.18 | torch 2.11.0+cpu | sklearn 1.6.1 | device cpu  | SMOKE=False\n"}
+,{"stream_name":"stdout","time":27.973461703,"data":"/kaggle/input/datasets/emon3469/bangla-2-domain-embedding-eval-set/eval_set.parquet (2100, 12)\n"}
+,{"stream_name":"stderr","time":45.645385688,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":45.645429585,"data":"\n"}
+,{"stream_name":"stderr","time":45.645437638,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":52.075719196,"data":"[transformers] \u001b[1mElectraModel LOAD REPORT\u001b[0m from: csebuetnlp/banglabert\n"}
+,{"stream_name":"stderr","time":52.07575099,"data":"Key                                               | Status     |  | \n"}
+,{"stream_name":"stderr","time":52.075755574,"data":"--------------------------------------------------+------------+--+-\n"}
+,{"stream_name":"stderr","time":52.07576027,"data":"discriminator_predictions.dense.weight            | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":52.075779615,"data":"discriminator_predictions.dense_prediction.weight | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":52.07578567,"data":"discriminator_predictions.dense.bias              | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":52.075791171,"data":"discriminator_predictions.dense_prediction.bias   | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":52.075797438,"data":"\n"}
+,{"stream_name":"stderr","time":52.075802422,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":52.075807239,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":52.075812547,"data":"\n"}
+,{"stream_name":"stderr","time":52.075817234,"data":"[transformers] \u001b[1mElectraModel LOAD REPORT\u001b[0m from: csebuetnlp/banglabert\n"}
+,{"stream_name":"stderr","time":52.075822901,"data":"Key                                               | Status     |  | \n"}
+,{"stream_name":"stderr","time":52.07583382,"data":"--------------------------------------------------+------------+--+-\n"}
+,{"stream_name":"stderr","time":52.075837887,"data":"discriminator_predictions.dense.weight            | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":52.075842157,"data":"discriminator_predictions.dense_prediction.weight | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":52.075847312,"data":"discriminator_predictions.dense.bias              | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":52.075884177,"data":"discriminator_predictions.dense_prediction.bias   | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":52.075889873,"data":"\n"}
+,{"stream_name":"stderr","time":52.075894205,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":52.0758989,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stdout","time":340.588151367,"data":"BanglaBERT       dim=768   311.9s  (    6.7 texts/s)  elapsed  5.5/30 min\n"}
+,{"stream_name":"stderr","time":362.055343497,"data":"[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (865 \u003e 256). Running this sequence through the model will result in indexing errors\n"}
+,{"stream_name":"stderr","time":362.055396509,"data":"\n"}
+,{"stream_name":"stderr","time":362.055402063,"data":"[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (865 \u003e 256). Running this sequence through the model will result in indexing errors\n"}
+,{"stream_name":"stdout","time":695.494999926,"data":"BanglaSBERT      dim=768   355.3s  (    5.9 texts/s)  elapsed 11.5/30 min\n"}
+,{"stream_name":"stderr","time":708.459360718,"data":"[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (865 \u003e 256). Running this sequence through the model will result in indexing errors\n"}
+,{"stream_name":"stderr","time":708.459444775,"data":"\n"}
+,{"stream_name":"stderr","time":708.4594531,"data":"[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (865 \u003e 256). Running this sequence through the model will result in indexing errors\n"}
+,{"stream_name":"stdout","time":1025.002509397,"data":"mE5-base         dim=768   329.3s  (    6.4 texts/s)  elapsed 16.9/30 min\n"}
+,{"stream_name":"stdout","time":1061.336079625,"data":"   fastText .bin ready in 31s; loading ...\n"}
+,{"stream_name":"stdout","time":1063.68014246,"data":"fastText-cc.bn   dim=300    38.5s  (   54.5 texts/s)  elapsed 17.6/30 min\n"}
+,{"stream_name":"stdout","time":1077.132305901,"data":"TFIDF-char-SVD   dim=300    13.7s  (  153.7 texts/s)  elapsed 17.8/30 min\n"}
+,{"stream_name":"stdout","time":1077.132343478,"data":"Encoded: ['BanglaBERT', 'BanglaSBERT', 'mE5-base', 'fastText-cc.bn', 'TFIDF-char-SVD']\n"}
+,{"stream_name":"stdout","time":1124.970828218,"data":"24 evaluation jobs in 48s\n"}
+,{"stream_name":"stdout","time":1125.63296096,"data":"Domain 1 (formal news) winner : mE5-base   (runner-up fastText-cc.bn)\n"}
+,{"stream_name":"stdout","time":1125.632993,"data":"Domain 2 (informal UGC) winner: mE5-base   (runner-up fastText-cc.bn)\n"}
+,{"stream_name":"stdout","time":1125.632999799,"data":"  D1: winner beats TF-IDF floor by +1.5 macro-F1 points\n"}
+,{"stream_name":"stdout","time":1125.633005562,"data":"  D2: winner beats TF-IDF floor by +5.6 macro-F1 points\n"}
+,{"stream_name":"stdout","time":1125.702214235,"data":"Friedman chi2=13.588, p=0.00873; Nemenyi CD = 2.728 * sqrt(5*6/(6*20)) = 1.364\n"}
+,{"stream_name":"stdout","time":1125.702246233,"data":"Caveat: folds of one task share data, so blocks are not fully independent — read CD as descriptive.\n"}
+,{"stream_name":"stdout","time":1151.423068966,"data":"AUDIT PASSED — 222 metric checks + fold, CKA and CD checks.\n"}
+,{"stream_name":"stdout","time":1151.423113875,"data":"\n"}
+,{"stream_name":"stdout","time":1151.423120512,"data":"Worked example — mE5-base on hate_binary_2 (n = 330)\n"}
+,{"stream_name":"stdout","time":1151.423130735,"data":"               pred hate  pred not_hate\n"}
+,{"stream_name":"stdout","time":1151.423162762,"data":"gold hate            120             45\n"}
+,{"stream_name":"stdout","time":1151.423166781,"data":"gold not_hate         34            131\n"}
+,{"stream_name":"stdout","time":1151.423170616,"data":"       hate: P = 120/(120+34) = 0.7792 | R = 120/(120+45) = 0.7273 | F1 = 2·P·R/(P+R) = 0.7524\n"}
+,{"stream_name":"stdout","time":1151.423174744,"data":"   not_hate: P = 131/(131+45) = 0.7443 | R = 131/(131+34) = 0.7939 | F1 = 2·P·R/(P+R) = 0.7683\n"}
+,{"stream_name":"stdout","time":1151.423178317,"data":"  macro-F1 = (0.7524 + 0.7683) / 2 = 0.7603\n"}
+,{"stream_name":"stdout","time":1151.423181597,"data":"  accuracy = 251/330 = 0.7606\n"}
+,{"stream_name":"stdout","time":1151.542254907,"data":"Total runtime 19.1 min (budget 30). Results in /kaggle/working/results\n"}
+,{"stream_name":"stdout","time":1151.542306402,"data":"WINNERS -\u003e Domain 1: mE5-base | Domain 2: mE5-base\n"}
+,{"stream_name":"stderr","time":1156.664045264,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1156.664092252,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1156.815702342,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1156.815756163,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1157.578100701,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":1157.727393186,"data":"[NbConvertApp] Writing 1194603 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":1160.25371713,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1161.104900595,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":1161.104932196,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1161.105108493,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1161.105424559,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1161.105722382,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1161.10589936,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1161.106083678,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1161.10630645,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1161.106578675,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1161.106830733,"data":"[NbConvertApp] Writing 897625 bytes to __results__.html\n"}
+]

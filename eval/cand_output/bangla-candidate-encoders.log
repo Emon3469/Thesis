@@ -1,0 +1,65 @@
+[{"stream_name":"stderr","time":6.81045198,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.810513919,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.810519755,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.810523396,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.3876277009999995,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.387657846,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.3876627169999995,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.387666484,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":71.636262259,"data":"device cuda | torch 2.11.0+cu130 | sentence-transformers 6.3.0\n"}
+,{"stream_name":"stderr","time":76.441345701,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":76.441388141,"data":"\n"}
+,{"stream_name":"stderr","time":76.441394051,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":76.442195373,"data":"WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":76.442217637,"data":"\n"}
+,{"stream_name":"stderr","time":76.442222792,"data":"WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":90.803512233,"data":"[transformers] \u001b[1mElectraModel LOAD REPORT\u001b[0m from: csebuetnlp/banglabert_large\n"}
+,{"stream_name":"stderr","time":90.803567814,"data":"Key                                               | Status     |  | \n"}
+,{"stream_name":"stderr","time":90.803595872,"data":"--------------------------------------------------+------------+--+-\n"}
+,{"stream_name":"stderr","time":90.803601785,"data":"discriminator_predictions.dense.bias              | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":90.803607218,"data":"discriminator_predictions.dense_prediction.weight | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":90.803612343,"data":"discriminator_predictions.dense_prediction.bias   | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":90.803617262,"data":"discriminator_predictions.dense.weight            | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":90.803621997,"data":"\n"}
+,{"stream_name":"stderr","time":90.803634174,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":90.80363867,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":90.803643528,"data":"\n"}
+,{"stream_name":"stderr","time":90.803647836,"data":"[transformers] \u001b[1mElectraModel LOAD REPORT\u001b[0m from: csebuetnlp/banglabert_large\n"}
+,{"stream_name":"stderr","time":90.803652566,"data":"Key                                               | Status     |  | \n"}
+,{"stream_name":"stderr","time":90.803657161,"data":"--------------------------------------------------+------------+--+-\n"}
+,{"stream_name":"stderr","time":90.803689268,"data":"discriminator_predictions.dense.bias              | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":90.803693912,"data":"discriminator_predictions.dense_prediction.weight | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":90.803698345,"data":"discriminator_predictions.dense_prediction.bias   | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":90.803702701,"data":"discriminator_predictions.dense.weight            | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":90.803706876,"data":"\n"}
+,{"stream_name":"stderr","time":90.803710761,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":90.803714329,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stdout","time":143.788651442,"data":"BanglaBERT-large       dim=1024    70.5s  elapsed 2.3 min  diag={'D1_formal_news': {'fertility': 1.3363864804292214, 'unk_rate': 0.00014568320340424377, 'trunc_rate': 0.49523809523809526}, 'D2_informal_ugc': {'fertility': 1.3122728688609697, 'unk_rate': 0.0010286030778969024, 'trunc_rate': 0.007619047619047619}}\n"}
+,{"stream_name":"stderr","time":171.060451233,"data":"[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (865 \u003e 256). Running this sequence through the model will result in indexing errors\n"}
+,{"stream_name":"stderr","time":171.060489178,"data":"\n"}
+,{"stream_name":"stderr","time":171.060496512,"data":"[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (865 \u003e 256). Running this sequence through the model will result in indexing errors\n"}
+,{"stream_name":"stdout","time":232.596352811,"data":"mE5-large              dim=1024    88.5s  elapsed 3.7 min  diag={'D1_formal_news': {'fertility': 2.0549650210236337, 'unk_rate': 0.0, 'trunc_rate': 0.7847619047619048}, 'D2_informal_ugc': {'fertility': 1.957153985977668, 'unk_rate': 0.00015921454159479898, 'trunc_rate': 0.012380952380952381}}\n"}
+,{"stream_name":"stderr","time":255.123735671,"data":"[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (865 \u003e 256). Running this sequence through the model will result in indexing errors\n"}
+,{"stream_name":"stderr","time":255.123776061,"data":"\n"}
+,{"stream_name":"stderr","time":255.123782159,"data":"[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (865 \u003e 256). Running this sequence through the model will result in indexing errors\n"}
+,{"stream_name":"stdout","time":263.810468673,"data":"BnEmbed-e5s-banglish   dim=1024    31.0s  elapsed 4.3 min  diag={'D1_formal_news': {'fertility': 2.0549650210236337, 'unk_rate': 0.0, 'trunc_rate': 0.7847619047619048}, 'D2_informal_ugc': {'fertility': 1.957153985977668, 'unk_rate': 0.00015921454159479898, 'trunc_rate': 0.012380952380952381}}\n"}
+,{"stream_name":"stderr","time":291.599124248,"data":"[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (865 \u003e 256). Running this sequence through the model will result in indexing errors\n"}
+,{"stream_name":"stderr","time":291.59917867,"data":"\n"}
+,{"stream_name":"stderr","time":291.599184558,"data":"[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (865 \u003e 256). Running this sequence through the model will result in indexing errors\n"}
+,{"stream_name":"stdout","time":300.348769066,"data":"BnEmbed-e5s            dim=1024    36.3s  elapsed 4.9 min  diag={'D1_formal_news': {'fertility': 2.0549650210236337, 'unk_rate': 0.0, 'trunc_rate': 0.7847619047619048}, 'D2_informal_ugc': {'fertility': 1.957153985977668, 'unk_rate': 0.00015921454159479898, 'trunc_rate': 0.012380952380952381}}\n"}
+,{"stream_name":"stderr","time":319.2844687,"data":"[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (589 \u003e 256). Running this sequence through the model will result in indexing errors\n"}
+,{"stream_name":"stderr","time":319.284507576,"data":"\n"}
+,{"stream_name":"stderr","time":319.28451281,"data":"[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (589 \u003e 256). Running this sequence through the model will result in indexing errors\n"}
+,{"stream_name":"stdout","time":340.609364614,"data":"L3Cube-BnSBERT         dim=768     40.0s  elapsed 5.5 min  diag={'D1_formal_news': {'fertility': 1.414061367261128, 'unk_rate': 0.0003044003473368174, 'trunc_rate': 0.5371428571428571}, 'D2_informal_ugc': {'fertility': 1.4357829135289535, 'unk_rate': 0.00571511249366997, 'trunc_rate': 0.010476190476190476}}\n"}
+,{"stream_name":"stdout","time":352.27259233,"data":"   w2v files: ['bnwiki_word2vec.model']\n"}
+,{"stream_name":"stdout","time":355.661716388,"data":"bnlp-word2vec          dim=100     15.0s  elapsed 5.8 min  diag={'D1_formal_news': {'fertility': 1.0, 'unk_rate': 0.03851037964490077, 'trunc_rate': 0.0, 'empty_texts': 0}, 'D2_informal_ugc': {'fertility': 1.0, 'unk_rate': 0.10149953139643861, 'trunc_rate': 0.0, 'empty_texts': 1}}\n"}
+,{"stream_name":"stdout","time":355.661749473,"data":"done 5.8 min; failed: []\n"}
+,{"stream_name":"stderr","time":361.34413716,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":361.3441706,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":361.497941882,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":361.497971837,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":362.230554912,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":362.437833769,"data":"[NbConvertApp] Writing 855270 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":364.988627007,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":365.607782321,"data":"[NbConvertApp] Writing 998033 bytes to __results__.html\n"}
+]

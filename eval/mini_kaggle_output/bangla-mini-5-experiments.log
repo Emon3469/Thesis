@@ -1,0 +1,68 @@
+[{"stream_name":"stderr","time":8.393946678,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.394005553,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.394012021,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.394016862,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.997602114,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.997629472,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.997634194,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.997638215,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":35.209717895,"data":"python 3.13.16 | torch 2.11.0+cu130 | device cuda | SMOKE=False\n"}
+,{"stream_name":"stdout","time":35.224206225,"data":"domain_1        -\u003e ['BanglaBERT']\n"}
+,{"stream_name":"stdout","time":35.224228923,"data":"domain_2        -\u003e ['BanglaSBERT']\n"}
+,{"stream_name":"stdout","time":35.224232483,"data":"merged_dataset  -\u003e ['BanglaBERT', 'BanglaSBERT', 'mE5-base']\n"}
+,{"stream_name":"stderr","time":56.829943557,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":56.82998434,"data":"\n"}
+,{"stream_name":"stderr","time":56.829988571,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":67.385961517,"data":"[transformers] \u001b[1mElectraModel LOAD REPORT\u001b[0m from: csebuetnlp/banglabert\n"}
+,{"stream_name":"stderr","time":67.385994569,"data":"Key                                               | Status     |  | \n"}
+,{"stream_name":"stderr","time":67.386001452,"data":"--------------------------------------------------+------------+--+-\n"}
+,{"stream_name":"stderr","time":67.386007387,"data":"discriminator_predictions.dense.bias              | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":67.386013204,"data":"discriminator_predictions.dense_prediction.bias   | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":67.386018666,"data":"discriminator_predictions.dense_prediction.weight | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":67.386024201,"data":"discriminator_predictions.dense.weight            | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":67.386029863,"data":"\n"}
+,{"stream_name":"stderr","time":67.386035404,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":67.386040795,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":67.38604711,"data":"\n"}
+,{"stream_name":"stderr","time":67.386052919,"data":"[transformers] \u001b[1mElectraModel LOAD REPORT\u001b[0m from: csebuetnlp/banglabert\n"}
+,{"stream_name":"stderr","time":67.386058356,"data":"Key                                               | Status     |  | \n"}
+,{"stream_name":"stderr","time":67.386064022,"data":"--------------------------------------------------+------------+--+-\n"}
+,{"stream_name":"stderr","time":67.38606988,"data":"discriminator_predictions.dense.bias              | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":67.386088524,"data":"discriminator_predictions.dense_prediction.bias   | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":67.386093686,"data":"discriminator_predictions.dense_prediction.weight | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":67.386097958,"data":"discriminator_predictions.dense.weight            | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":67.386102497,"data":"\n"}
+,{"stream_name":"stderr","time":67.38610679,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":67.386111287,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stdout","time":71.227045148,"data":"BanglaBERT   dim=768 34.3s\n"}
+,{"stream_name":"stdout","time":105.338351521,"data":"BanglaSBERT  dim=768 34.6s\n"}
+,{"stream_name":"stdout","time":125.323415998,"data":"mE5-base     dim=768 19.9s\n"}
+,{"stream_name":"stdout","time":133.273279802,"data":"\n"}
+,{"stream_name":"stdout","time":133.273311734,"data":"===== domain_1 =====\n"}
+,{"stream_name":"stdout","time":133.283886683,"data":"\n"}
+,{"stream_name":"stdout","time":133.283908594,"data":"===== domain_2 =====\n"}
+,{"stream_name":"stdout","time":133.29589583,"data":"\n"}
+,{"stream_name":"stdout","time":133.29591509,"data":"===== merged_dataset =====\n"}
+,{"stream_name":"stdout","time":136.739610268,"data":"AUDIT PASSED — 100 checks\n"}
+,{"stream_name":"stdout","time":136.739643,"data":"\n"}
+,{"stream_name":"stdout","time":136.739647014,"data":"Worked example — BanglaBERT on domain_1: partner ranks = [6, 2, 4, 4, 3, 5, 8, 1, 7, 4]\n"}
+,{"stream_name":"stdout","time":136.739650539,"data":"  R@1 = 1/10 = 0.100\n"}
+,{"stream_name":"stdout","time":136.739653475,"data":"  MRR = (0.1667 + 0.5 + 0.25 + 0.25 + 0.3333 + 0.2 + 0.125 + 1 + 0.1429 + 0.25) / 10 = 0.3218\n"}
+,{"stream_name":"stdout","time":136.739657618,"data":"\n"}
+,{"stream_name":"stdout","time":136.739673796,"data":"Worked example — BanglaSBERT on domain_2: partner ranks = [4, 2, 9, 9, 6, 4, 8, 5, 5, 2]\n"}
+,{"stream_name":"stdout","time":136.739679165,"data":"  R@1 = 0/10 = 0.000\n"}
+,{"stream_name":"stdout","time":136.739684176,"data":"  MRR = (0.25 + 0.5 + 0.1111 + 0.1111 + 0.1667 + 0.25 + 0.125 + 0.2 + 0.2 + 0.5) / 10 = 0.2414\n"}
+,{"stream_name":"stdout","time":136.739688777,"data":"\n"}
+,{"stream_name":"stdout","time":136.739693608,"data":"Done in 2.11 min -\u003e /kaggle/working/mini_results\n"}
+,{"stream_name":"stderr","time":142.929078237,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":142.92912218,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":143.093668195,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":143.093689523,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":143.84905001,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":143.978125156,"data":"[NbConvertApp] Writing 742708 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":146.434397477,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":147.089013739,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":147.089059232,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":147.089297428,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":147.089570483,"data":"[NbConvertApp] Writing 739187 bytes to __results__.html\n"}
+]

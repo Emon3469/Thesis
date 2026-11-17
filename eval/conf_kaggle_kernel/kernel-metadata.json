@@ -1,0 +1,1 @@
+{"id": "emon3469/bangla-w2v-conf", "title": "bangla-w2v-conf", "code_file": "bangla-w2v-conf.ipynb", "language": "python", "kernel_type": "notebook", "is_private": true, "enable_gpu": false, "enable_internet": true, "dataset_sources": ["emon3469/bangla-w2v-preeval-data"], "competition_sources": [], "kernel_sources": ["emon3469/bangla-w2v-merge"]}

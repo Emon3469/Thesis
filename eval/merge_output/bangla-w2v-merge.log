@@ -1,0 +1,83 @@
+[{"stream_name":"stderr","time":9.038967276,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.039016874,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.039021755,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.039024611,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.78758709,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.787626172,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.787632625,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.787636663,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":35.021690205,"data":"data: /kaggle/input/datasets/emon3469/bangla-w2v-preeval-data | cpus: 4 | SMOKE: False\n"}
+,{"stream_name":"stdout","time":40.979318688,"data":"domain           task              \n"}
+,{"stream_name":"stdout","time":40.979356554,"data":"D1_formal_news   news_topic_7          5950\n"}
+,{"stream_name":"stdout","time":40.979362473,"data":"D2_informal_ugc  hate_binary_2         2250\n"}
+,{"stream_name":"stdout","time":40.979367038,"data":"                 review_sentiment_3    2250\n"}
+,{"stream_name":"stdout","time":40.979371931,"data":"                 social_sentiment_3    1500\n"}
+,{"stream_name":"stdout","time":40.979376628,"data":"dtype: int64 \n"}
+,{"stream_name":"stdout","time":40.979380817,"data":"needed words: 139842\n"}
+,{"stream_name":"stdout","time":2598.378431706,"data":"News-W2V: vocab 187,686, corpus 65,324,912 words, 2557s\n"}
+,{"stream_name":"stdout","time":2693.836340671,"data":"Informal-W2V: vocab 32,910, corpus 3,192,884 words, 95s\n"}
+,{"stream_name":"stderr","time":2698.157003123,"data":"WARNING:gensim.models.word2vec:Effective 'alpha' higher than previous training cycles\n"}
+,{"stream_name":"stderr","time":2698.157053742,"data":"\n"}
+,{"stream_name":"stderr","time":2698.157062979,"data":"WARNING:gensim.models.word2vec:Effective 'alpha' higher than previous training cycles\n"}
+,{"stream_name":"stdout","time":2791.957408203,"data":"Continued-W2V: vocab 194,383, 98s\n"}
+,{"stream_name":"stdout","time":5449.903725286,"data":"Joint-W2V: vocab 199,071, corpus 68,517,796 words, 2650s\n"}
+,{"stream_name":"stdout","time":5561.190337711,"data":"   downloaded bn_300_2_sg_wxd.csv.bz2 in 111s\n"}
+,{"stream_name":"stdout","time":5631.20106367,"data":"   downloaded cc.bn.300.vec.gz in 3s\n"}
+,{"stream_name":"stdout","time":5676.316148902,"data":"{'News-W2V': 187686, 'Informal-W2V': 32910, 'Subs2vec-w2': 177376, 'fastText-cc.bn': 234474, 'Continued-W2V': 194383, 'Joint-W2V': 199071} | elapsed 94.4 min\n"}
+,{"stream_name":"stdout","time":5710.326996056,"data":"News-W2V                           dim  300  D1 0.8742  D2 0.6227  Overall 0.7485  analogy 0.0627  simAUC 0.881  33s\n"}
+,{"stream_name":"stdout","time":5727.155946662,"data":"Informal-W2V                       dim  300  D1 0.8154  D2 0.6454  Overall 0.7304  analogy 0.0081  simAUC 0.692  17s\n"}
+,{"stream_name":"stdout","time":5761.926136312,"data":"Subs2vec-w2                        dim  300  D1 0.8585  D2 0.6255  Overall 0.7420  analogy 0.0585  simAUC 0.858  35s\n"}
+,{"stream_name":"stdout","time":5799.320514479,"data":"fastText-cc.bn                     dim  300  D1 0.8793  D2 0.6447  Overall 0.7620  analogy 0.0757  simAUC 0.867  37s\n"}
+,{"stream_name":"stdout","time":5833.212804348,"data":"Continued-W2V                      dim  300  D1 0.8734  D2 0.6567  Overall 0.7651  analogy 0.0481  simAUC 0.889  34s\n"}
+,{"stream_name":"stdout","time":5868.813370766,"data":"Joint-W2V                          dim  300  D1 0.8752  D2 0.6570  Overall 0.7661  analogy 0.0621  simAUC 0.888  36s\n"}
+,{"stream_name":"stdout","time":5868.813442421,"data":"specialists: D1 = fastText-cc.bn, D2 = Informal-W2V | best single overall = fastText-cc.bn | eligibility: D1 \u003e= 0.8693 and D2 \u003e= 0.6354\n"}
+,{"stream_name":"stdout","time":6089.367516511,"data":"{'P': {'P1_pass': True, 'P2_pass': True, 'P5_pass': True, 'P6_pass': False}, 'Q': {'P1_pass': True, 'P2_pass': True, 'P5_pass': True, 'P6_pass': False}} | elapsed 101.3 min\n"}
+,{"stream_name":"stdout","time":6091.142134354,"data":"--- P: News-W2V + Subs2vec-w2 | union vocabulary 268,346\n"}
+,{"stream_name":"stdout","time":6154.791180981,"data":"P: CONC                            dim  600  D1 0.8793  D2 0.6384  Overall 0.7589  analogy 0.0742  simAUC 0.883  59s\n"}
+,{"stream_name":"stdout","time":6181.344395135,"data":"P: CONC+SVD100                     dim  100  D1 0.8638  D2 0.6250  Overall 0.7444  analogy 0.0567  simAUC 0.888  22s\n"}
+,{"stream_name":"stdout","time":6210.65296595,"data":"P: CONC+SVD200                     dim  200  D1 0.8733  D2 0.6254  Overall 0.7493  analogy 0.0729  simAUC 0.892  29s\n"}
+,{"stream_name":"stdout","time":6248.004652113,"data":"P: CONC+SVD300                     dim  300  D1 0.8774  D2 0.6265  Overall 0.7519  analogy 0.0760  simAUC 0.890  37s\n"}
+,{"stream_name":"stdout","time":6308.044173957,"data":"P: wCONC a=0.3                     dim  600  D1 0.8793  D2 0.6384  Overall 0.7589  analogy 0.0675  simAUC 0.876  59s\n"}
+,{"stream_name":"stdout","time":6369.700635521,"data":"P: wCONC a=0.7                     dim  600  D1 0.8793  D2 0.6384  Overall 0.7589  analogy 0.0751  simAUC 0.885  59s\n"}
+,{"stream_name":"stdout","time":6476.4133593,"data":"P: AAEME                           dim  300  D1 0.8743  D2 0.6260  Overall 0.7502  analogy 0.0817  simAUC 0.882  37s\n"}
+,{"stream_name":"stdout","time":6623.430420585,"data":"P: CAEME                           dim  600  D1 0.8826  D2 0.6367  Overall 0.7596  analogy 0.0766  simAUC 0.885  59s\n"}
+,{"stream_name":"stdout","time":6684.960394729,"data":"P: CONC-zero                       dim  600  D1 0.8804  D2 0.6360  Overall 0.7582  analogy 0.0870  simAUC 0.883  59s\n"}
+,{"stream_name":"stdout","time":6724.929779272,"data":"P: Procrustes+AVG                  dim  300  D1 0.8777  D2 0.6335  Overall 0.7556  analogy 0.0741  simAUC 0.885  37s\n"}
+,{"stream_name":"stdout","time":6725.169481781,"data":"   elapsed 111.9 min\n"}
+,{"stream_name":"stdout","time":6725.169520662,"data":"--- Q: News-W2V + Informal-W2V | union vocabulary 194,383\n"}
+,{"stream_name":"stdout","time":6781.250042526,"data":"Q: CONC                            dim  600  D1 0.8799  D2 0.6594  Overall 0.7697  analogy 0.0439  simAUC 0.791  53s\n"}
+,{"stream_name":"stdout","time":6806.155497276,"data":"Q: CONC+SVD100                     dim  100  D1 0.8596  D2 0.6506  Overall 0.7551  analogy 0.0326  simAUC 0.815  21s\n"}
+,{"stream_name":"stdout","time":6832.835346803,"data":"Q: CONC+SVD200                     dim  200  D1 0.8671  D2 0.6470  Overall 0.7571  analogy 0.0477  simAUC 0.824  26s\n"}
+,{"stream_name":"stdout","time":6867.00221191,"data":"Q: CONC+SVD300                     dim  300  D1 0.8787  D2 0.6485  Overall 0.7636  analogy 0.0496  simAUC 0.818  34s\n"}
+,{"stream_name":"stdout","time":6920.520417766,"data":"Q: wCONC a=0.3                     dim  600  D1 0.8799  D2 0.6594  Overall 0.7697  analogy 0.0320  simAUC 0.754  53s\n"}
+,{"stream_name":"stdout","time":6974.323867666,"data":"Q: wCONC a=0.7                     dim  600  D1 0.8799  D2 0.6594  Overall 0.7697  analogy 0.0526  simAUC 0.829  53s\n"}
+,{"stream_name":"stdout","time":7051.245455544,"data":"Q: AAEME                           dim  300  D1 0.8752  D2 0.6579  Overall 0.7666  analogy 0.0556  simAUC 0.840  34s\n"}
+,{"stream_name":"stdout","time":7167.170234725,"data":"Q: CAEME                           dim  600  D1 0.8817  D2 0.6599  Overall 0.7708  analogy 0.0507  simAUC 0.806  53s\n"}
+,{"stream_name":"stdout","time":7223.605630032,"data":"Q: CONC-zero                       dim  600  D1 0.8808  D2 0.6580  Overall 0.7694  analogy 0.0450  simAUC 0.791  53s\n"}
+,{"stream_name":"stdout","time":7259.071379369,"data":"Q: Procrustes+AVG                  dim  300  D1 0.8717  D2 0.6538  Overall 0.7628  analogy 0.0409  simAUC 0.802  34s\n"}
+,{"stream_name":"stdout","time":7259.427841961,"data":"   elapsed 120.8 min\n"}
+,{"stream_name":"stdout","time":7259.629231128,"data":"--- T: News-W2V + Informal-W2V + Subs2vec-w2 | union vocabulary 273,531\n"}
+,{"stream_name":"stdout","time":7506.053146037,"data":"T: CONC                            dim  900  D1 0.8823  D2 0.6601  Overall 0.7712  analogy 0.0600  simAUC 0.819  83s\n"}
+,{"stream_name":"stdout","time":7538.06908681,"data":"T: CONC+SVD100                     dim  100  D1 0.8593  D2 0.6524  Overall 0.7559  analogy 0.0469  simAUC 0.844  22s\n"}
+,{"stream_name":"stdout","time":7567.541589934,"data":"T: CONC+SVD200                     dim  200  D1 0.8705  D2 0.6494  Overall 0.7600  analogy 0.0618  simAUC 0.844  29s\n"}
+,{"stream_name":"stdout","time":7605.519744709,"data":"T: CONC+SVD300                     dim  300  D1 0.8757  D2 0.6504  Overall 0.7631  analogy 0.0673  simAUC 0.842  37s\n"}
+,{"stream_name":"stdout","time":7605.758723079,"data":"   elapsed 126.6 min\n"}
+,{"stream_name":"stdout","time":7605.758767909,"data":"--- S: fastText-cc.bn + Informal-W2V | union vocabulary 238,691\n"}
+,{"stream_name":"stdout","time":7667.506419861,"data":"S: CONC                            dim  600  D1 0.8833  D2 0.6581  Overall 0.7707  analogy 0.0580  simAUC 0.794  58s\n"}
+,{"stream_name":"stdout","time":7667.745675238,"data":"   elapsed 127.6 min\n"}
+,{"stream_name":"stdout","time":7668.270292051,"data":"--- X: fastText-cc.bn + News-W2V + Informal-W2V + Subs2vec-w2 | union vocabulary 354,843\n"}
+,{"stream_name":"stdout","time":7791.378074622,"data":"X: CONC                            dim 1200  D1 0.8885  D2 0.6582  Overall 0.7733  analogy 0.0823  simAUC 0.840  110s\n"}
+,{"stream_name":"stdout","time":7794.282944918,"data":"   elapsed 129.7 min\n"}
+,{"stream_name":"stdout","time":7794.489077268,"data":"SELECTED pure Word2Vec: T: CONC (eligible) | SELECTED extended: X: CONC (eligible)\n"}
+,{"stream_name":"stdout","time":7796.337756355,"data":"DONE in 129.8 min -\u003e /kaggle/working/merge_results\n"}
+,{"stream_name":"stderr","time":7802.536984375,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":7802.537024949,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":7802.781869171,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":7802.781902352,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":7803.734922606,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":7803.844606731,"data":"[NbConvertApp] Writing 205826 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":7806.993841097,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":7807.952772949,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":7807.952834854,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":7807.953153588,"data":"[NbConvertApp] Writing 535266 bytes to __results__.html\n"}
+]

@@ -1,0 +1,93 @@
+note: bnlp-word2vec has 1 all-zero rows
+sources: {'BanglaBERT': 768, 'BanglaSBERT': 768, 'fastText-cc.bn': 300, 'mE5-base': 768, 'TFIDF-char-SVD': 300, 'BanglaBERT-large': 1024, 'BnEmbed-e5s-banglish': 1024, 'BnEmbed-e5s': 1024, 'bnlp-word2vec': 100, 'L3Cube-BnSBERT': 768, 'mE5-large': 1024}
+
+Stage 1 (DEV) single sources
+                 srcs method  alpha     D1     D2  kNN_D1  kNN_D2  Overall  kNN_Overall  news_topic_7  review_sentiment_3  social_sentiment_3  hate_binary_2
+            mE5-base single    NaN 0.8555 0.6326  0.8576  0.5832   0.7440       0.7204        0.8555              0.5645              0.5515         0.7818
+           mE5-large single    NaN 0.8681 0.6083  0.8639  0.5592   0.7382       0.7116        0.8681              0.5803              0.4689         0.7758
+      fastText-cc.bn single    NaN 0.8588 0.6014  0.8135  0.5853   0.7301       0.6994        0.8588              0.4813              0.4986         0.8242
+      L3Cube-BnSBERT single    NaN 0.8065 0.6360  0.7557  0.5735   0.7212       0.6646        0.8065              0.5489              0.4924         0.8666
+BnEmbed-e5s-banglish single    NaN 0.8188 0.6125  0.8120  0.5893   0.7157       0.7007        0.8188              0.5006              0.5126         0.8242
+         BnEmbed-e5s single    NaN 0.8243 0.6048  0.8207  0.5752   0.7146       0.6980        0.8243              0.4904              0.4997         0.8242
+         BanglaSBERT single    NaN 0.7929 0.5634  0.7150  0.5102   0.6781       0.6126        0.7929              0.4888              0.4809         0.7204
+          BanglaBERT single    NaN 0.7713 0.5490  0.6672  0.4547   0.6601       0.5610        0.7713              0.4449              0.4810         0.7211
+      TFIDF-char-SVD single    NaN 0.7828 0.5319  0.7983  0.5097   0.6574       0.6540        0.7828              0.3473              0.4849         0.7636
+       bnlp-word2vec single    NaN 0.8078 0.5043  0.7292  0.4835   0.6561       0.6063        0.8078              0.4631              0.3960         0.6537
+    BanglaBERT-large single    NaN 0.6800 0.5137  0.5451  0.4441   0.5968       0.4946        0.6800              0.4318              0.4063         0.7029
+C at grid boundary: 21.8% of folds (grid 0.0001..10.0)
+best D1 = mE5-large | best D2 (distinct) = L3Cube-BnSBERT | best overall = mE5-base
+
+Stage 2 (DEV) pair screening, CONC-std
+                                srcs   method  alpha     D1     D2  kNN_D1  kNN_D2  Overall  kNN_Overall  news_topic_7  review_sentiment_3  social_sentiment_3  hate_binary_2  oracle_acc  CKA_D1  CKA_D2  gain_D1_vs_best_member  gain_D2_vs_best_member  gain_Overall_vs_best_member
+            mE5-base+fastText-cc.bn conc_std    NaN 0.8716 0.6468  0.8500  0.5877   0.7592       0.7189        0.8716              0.5385              0.5716         0.8302      0.8074  0.5670  0.3581                  0.0129                  0.0142                       0.0152
+            mE5-base+L3Cube-BnSBERT conc_std    NaN 0.8497 0.6647  0.8145  0.6245   0.7572       0.7195        0.8497              0.5928              0.5649         0.8363      0.7997  0.6954  0.4884                 -0.0058                  0.0287                       0.0131
+           mE5-large+L3Cube-BnSBERT conc_std    NaN 0.8650 0.6431  0.8127  0.6171   0.7541       0.7149        0.8650              0.5838              0.5092         0.8363      0.7855  0.6954  0.5331                 -0.0031                  0.0072                       0.0159
+L3Cube-BnSBERT+BnEmbed-e5s-banglish conc_std    NaN 0.8470 0.6551  0.7865  0.6244   0.7511       0.7055        0.8470              0.5570              0.5416         0.8667      0.7700  0.6956  0.6740                  0.0282                  0.0191                       0.0298
+           mE5-large+fastText-cc.bn conc_std    NaN 0.8766 0.6242  0.8506  0.5705   0.7504       0.7105        0.8766              0.5729              0.4877         0.8121      0.7872  0.5686  0.3810                  0.0085                  0.0159                       0.0122
+               mE5-base+BnEmbed-e5s conc_std    NaN 0.8546 0.6410  0.8399  0.5781   0.7478       0.7090        0.8546              0.5383              0.5424         0.8424      0.7836  0.7827  0.6137                 -0.0008                  0.0084                       0.0038
+     mE5-large+BnEmbed-e5s-banglish conc_std    NaN 0.8641 0.6268  0.8482  0.5774   0.7454       0.7128        0.8641              0.5428              0.5194         0.8182      0.7704  0.7645  0.6380                 -0.0040                  0.0143                       0.0072
+                 mE5-base+mE5-large conc_std    NaN 0.8557 0.6290  0.8776  0.5850   0.7423       0.7313        0.8557              0.5922              0.4949         0.7999      0.7572  0.8466  0.8879                 -0.0124                 -0.0036                      -0.0017
+         L3Cube-BnSBERT+BnEmbed-e5s conc_std    NaN 0.8454 0.6343  0.7881  0.6010   0.7398       0.6946        0.8454              0.5572              0.4851         0.8605      0.7745  0.6978  0.6746                  0.0211                 -0.0017                       0.0186
+      mE5-base+BnEmbed-e5s-banglish conc_std    NaN 0.8522 0.6255  0.8381  0.5918   0.7388       0.7150        0.8522              0.5401              0.5242         0.8121      0.7802  0.7738  0.6022                 -0.0033                 -0.0072                      -0.0052
+      fastText-cc.bn+L3Cube-BnSBERT conc_std    NaN 0.8374 0.6394  0.8117  0.5926   0.7384       0.7021        0.8374              0.5273              0.5302         0.8606      0.7966  0.5493  0.3736                 -0.0214                  0.0034                       0.0083
+              mE5-large+BnEmbed-e5s conc_std    NaN 0.8542 0.6218  0.8400  0.6041   0.7380       0.7220        0.8542              0.5313              0.4978         0.8363      0.7638  0.7688  0.6502                 -0.0139                  0.0135                      -0.0002
+         fastText-cc.bn+BnEmbed-e5s conc_std    NaN 0.8505 0.6204  0.8249  0.5953   0.7354       0.7101        0.8505              0.5142              0.5045         0.8424      0.7875  0.5332  0.4064                 -0.0082                  0.0156                       0.0054
+fastText-cc.bn+BnEmbed-e5s-banglish conc_std    NaN 0.8367 0.6220  0.8355  0.6146   0.7294       0.7250        0.8367              0.5225              0.5315         0.8121      0.7937  0.5267  0.3942                 -0.0220                  0.0096                      -0.0007
+   BnEmbed-e5s-banglish+BnEmbed-e5s conc_std    NaN 0.8245 0.6124  0.8090  0.5942   0.7184       0.7016        0.8245              0.5121              0.5129         0.8121      0.7120  0.9373  0.9429                  0.0001                 -0.0001                       0.0028
+
+Stage 3 (DEV) fusion methods
+                     srcs         method  alpha     D1     D2  kNN_D1  kNN_D2  Overall  kNN_Overall  news_topic_7  review_sentiment_3  social_sentiment_3  hate_binary_2
+ mE5-base+fastText-cc.bn         avg_l2    NaN 0.8868 0.6476  0.8360  0.5478   0.7672       0.6919        0.8868              0.5346              0.5718         0.8364
+ mE5-base+L3Cube-BnSBERT        conc_l2    NaN 0.8650 0.6627  0.7490  0.5756   0.7638       0.6623        0.8650              0.5796              0.5600         0.8485
+ mE5-base+fastText-cc.bn     conc_alpha   0.25 0.8716 0.6468  0.8315  0.5949   0.7592       0.7132        0.8716              0.5385              0.5716         0.8302
+ mE5-base+fastText-cc.bn     conc_alpha   0.75 0.8716 0.6468  0.8532  0.5821   0.7592       0.7176        0.8716              0.5385              0.5716         0.8302
+ mE5-base+fastText-cc.bn       conc_std    NaN 0.8716 0.6468  0.8500  0.5877   0.7592       0.7189        0.8716              0.5385              0.5716         0.8302
+ mE5-base+fastText-cc.bn        conc_l2    NaN 0.8718 0.6458  0.8375  0.5315   0.7588       0.6845        0.8718              0.5460              0.5491         0.8424
+ mE5-base+L3Cube-BnSBERT     conc_alpha   0.25 0.8497 0.6647  0.7791  0.5895   0.7572       0.6843        0.8497              0.5928              0.5649         0.8363
+ mE5-base+L3Cube-BnSBERT       conc_std    NaN 0.8497 0.6647  0.8145  0.6245   0.7572       0.7195        0.8497              0.5928              0.5649         0.8363
+ mE5-base+L3Cube-BnSBERT     conc_alpha   0.75 0.8497 0.6647  0.8418  0.6027   0.7572       0.7222        0.8497              0.5928              0.5649         0.8363
+ mE5-base+fastText-cc.bn          aaeme    NaN 0.8797 0.6343  0.8369  0.5956   0.7570       0.7163        0.8797              0.5637              0.5211         0.8180
+mE5-large+L3Cube-BnSBERT     conc_alpha   0.75 0.8650 0.6431  0.8498  0.6000   0.7541       0.7249        0.8650              0.5838              0.5092         0.8363
+mE5-large+L3Cube-BnSBERT     conc_alpha   0.25 0.8650 0.6431  0.7830  0.6024   0.7541       0.6927        0.8650              0.5838              0.5092         0.8363
+mE5-large+L3Cube-BnSBERT       conc_std    NaN 0.8650 0.6431  0.8127  0.6171   0.7541       0.7149        0.8650              0.5838              0.5092         0.8363
+mE5-large+L3Cube-BnSBERT          aaeme    NaN 0.8667 0.6405  0.8189  0.5981   0.7536       0.7085        0.8667              0.5719              0.5314         0.8182
+mE5-large+L3Cube-BnSBERT        conc_l2    NaN 0.8575 0.6479  0.7539  0.5931   0.7527       0.6735        0.8575              0.5927              0.5147         0.8361
+ mE5-base+L3Cube-BnSBERT       ensemble    NaN 0.8516 0.6466  0.8516  0.6466   0.7491       0.7491        0.8516              0.6074              0.5265         0.8060
+ mE5-base+L3Cube-BnSBERT          aaeme    NaN 0.8441 0.6475  0.8164  0.6014   0.7458       0.7089        0.8441              0.5840              0.5526         0.8061
+mE5-large+L3Cube-BnSBERT       ensemble    NaN 0.8453 0.6369  0.8453  0.6369   0.7411       0.7411        0.8453              0.5799              0.5127         0.8182
+ mE5-base+L3Cube-BnSBERT         avg_l2    NaN 0.8297 0.6508  0.7482  0.5798   0.7402       0.6640        0.8297              0.5541              0.5437         0.8545
+mE5-large+L3Cube-BnSBERT         avg_l2    NaN 0.8306 0.6487  0.7549  0.5762   0.7397       0.6655        0.8306              0.5749              0.5228         0.8485
+ mE5-base+fastText-cc.bn       ensemble    NaN 0.8594 0.6087  0.8594  0.6087   0.7341       0.7341        0.8594              0.5379              0.5124         0.7757
+mE5-large+L3Cube-BnSBERT procrustes_avg    NaN 0.8339 0.6142  0.8196  0.6179   0.7240       0.7187        0.8339              0.5694              0.5038         0.7693
+ mE5-base+fastText-cc.bn procrustes_avg    NaN 0.8351 0.6002  0.8505  0.5857   0.7176       0.7181        0.8351              0.5079              0.5110         0.7816
+ mE5-base+L3Cube-BnSBERT procrustes_avg    NaN 0.8039 0.6287  0.8137  0.6089   0.7163       0.7113        0.8039              0.5635              0.5408         0.7818
+ mE5-base+L3Cube-BnSBERT       pca_conc    NaN 0.8077 0.6101  0.8145  0.6245   0.7089       0.7195        0.8077              0.5600              0.5930         0.6774
+mE5-large+L3Cube-BnSBERT       pca_conc    NaN 0.8249 0.5539  0.8127  0.6171   0.6894       0.7149        0.8249              0.5034              0.5102         0.6480
+ mE5-base+fastText-cc.bn       pca_conc    NaN 0.8083 0.5698  0.8500  0.5877   0.6890       0.7189        0.8083              0.4982              0.4929         0.7182
+
+Dimension control
+                    srcs     method  alpha     D1     D2  kNN_D1  kNN_D2  Overall  kNN_Overall  news_topic_7  review_sentiment_3  social_sentiment_3  hate_binary_2                        control
+mE5-base+L3Cube-BnSBERT conc_noise    NaN 0.8586 0.5947  0.8452  0.5734   0.7266       0.7093        0.8586              0.5195              0.4888         0.7757 CONC(mE5-base, Gaussian noise)
+
+SELECTED on DEV: mE5-base+fastText-cc.bn | avg_l2 | alpha=0.5 | Overall=0.7672 (eligible under non-inferiority rule: True)
+
+Stage 5 (CONF) confirmation
+                  config     D1     D2  Overall  D1_lo  D2_lo  Overall_lo  D1_hi  D2_hi  Overall_hi  kNN_Overall
+       single:mE5-large 0.8579 0.6464   0.7521 0.8266 0.6036      0.7261 0.8863 0.6832      0.7748       0.7294
+CONC-std(selected pair) 0.8691 0.6235   0.7463 0.8394 0.5790      0.7192 0.8954 0.6621      0.7693       0.7111
+        single:mE5-base 0.8769 0.6078   0.7424 0.8478 0.5656      0.7165 0.9030 0.6452      0.7643       0.7175
+               SELECTED 0.8559 0.6150   0.7355 0.8261 0.5708      0.7080 0.8845 0.6540      0.7600       0.6894
+ENSEMBLE(selected pair) 0.8630 0.6046   0.7338 0.8340 0.5612      0.7068 0.8915 0.6431      0.7568       0.7338
+  single:L3Cube-BnSBERT 0.8165 0.6235   0.7200 0.7830 0.5828      0.6936 0.8458 0.6630      0.7438       0.6766
+  single:fastText-cc.bn 0.8429 0.5828   0.7129 0.8113 0.5383      0.6855 0.8733 0.6220      0.7373       0.6791
+            TFIDF floor 0.7913 0.5247   0.6580 0.7562 0.4822      0.6289 0.8215 0.5640      0.6825       0.6515
+
+Selected vs best single (CONF)
+  domain             reference   delta      lo     hi     p     SE  MDE_80pct_power  p_holm  noninferior(lo>-1pt)
+     D1      single:mE5-large -0.0020 -0.0243 0.0205 0.879 0.0114            0.032     1.0                 False
+     D2 single:L3Cube-BnSBERT -0.0084 -0.0567 0.0381 0.717 0.0239            0.067     1.0                 False
+Overall       single:mE5-base -0.0069 -0.0224 0.0094 0.411 0.0082            0.023     1.0                 False
+Label-permutation control (CONF): {'news_topic_7': 0.142, 'review_sentiment_3': 0.389, 'social_sentiment_3': 0.277, 'hate_binary_2': 0.473} | chance macro-F1 ≈ 1/C per task
+PRE-REGISTERED SUCCESS CRITERION MET: False
+
+Done in 19.9 min

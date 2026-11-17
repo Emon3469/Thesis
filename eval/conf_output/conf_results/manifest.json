@@ -1,0 +1,35 @@
+{
+  "minutes": 5.5,
+  "smoke": false,
+  "n_boot": 10000,
+  "alpha": 0.05,
+  "main": "T: CONC",
+  "baselines": [
+    "fastText-cc.bn",
+    "News-W2V",
+    "Informal-W2V"
+  ],
+  "conf_texts": {
+    "hate_binary_2": 2250,
+    "news_topic_7": 5950,
+    "review_sentiment_3": 2250,
+    "social_sentiment_3": 1500
+  },
+  "frozen_md5": {
+    "selected_pure_w2v": "10aa206f8462c82a7b16cf60054be70f",
+    "selected_extended": "dd6a4e253e93ae239aa8d79857643fc2",
+    "News-W2V": "e43195c774d403511a67b7ce83987d7a",
+    "Informal-W2V": "ec33a3960d435d361e5aadcdb2a08786"
+  },
+  "confirmed": true,
+  "vocab_rows_used": {
+    "T: CONC": 73918,
+    "X: CONC": 80454,
+    "News-W2V": 187686,
+    "Informal-W2V": 32910,
+    "Subs2vec-w2": 54891,
+    "fastText-cc.bn": 76630,
+    "Q: CONC (exploratory)": 71805
+  },
+  "numpy": "2.1.3"
+}
