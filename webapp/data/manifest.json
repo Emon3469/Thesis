@@ -1,0 +1,116 @@
+{
+  "created": "2026-11-19 02:07:57",
+  "models": {
+    "merged": {
+      "name": "BanglaMeta",
+      "rows": 273531,
+      "dim": 900,
+      "source": "eval\\merge_output\\merge_results\\models\\selected_pure_w2v.f16.npy",
+      "source_md5": "10aa206f8462c82a7b16cf60054be70f",
+      "served_md5": "0040863c623a000f3aadda5b87e875ca",
+      "max_norm_deviation_f16": 5.459785461425781e-05,
+      "pca_explained": [
+        0.0381,
+        0.0297,
+        0.024
+      ]
+    },
+    "fasttext": {
+      "name": "fastText-cc.bn",
+      "rows": 234474,
+      "dim": 300,
+      "source": "webapp\\data\\models\\fastText-cc.bn.f16.npy",
+      "source_md5": "9de22ef3fdc74ce3e1741a0cf5494128",
+      "served_md5": "473444254e2966675d19024f08a58bdd",
+      "max_norm_deviation_f16": 0.0002454519271850586,
+      "pca_explained": [
+        0.0279,
+        0.017,
+        0.0162
+      ]
+    },
+    "news": {
+      "name": "News-W2V",
+      "rows": 187686,
+      "dim": 300,
+      "source": "eval\\merge_output\\merge_results\\models\\News-W2V.f16.npy",
+      "source_md5": "e43195c774d403511a67b7ce83987d7a",
+      "served_md5": "69e787ee9cac39c074f485a1f66cc6be",
+      "max_norm_deviation_f16": 9.584426879882812e-05,
+      "pca_explained": [
+        0.0268,
+        0.0237,
+        0.0195
+      ]
+    },
+    "informal": {
+      "name": "Informal-W2V",
+      "rows": 32910,
+      "dim": 300,
+      "source": "eval\\merge_output\\merge_results\\models\\Informal-W2V.f16.npy",
+      "source_md5": "ec33a3960d435d361e5aadcdb2a08786",
+      "served_md5": "9793d2b6661f1f9a0b144701354543b9",
+      "max_norm_deviation_f16": 8.410215377807617e-05,
+      "pca_explained": [
+        0.0862,
+        0.0736,
+        0.0645
+      ]
+    },
+    "merged_sim": {
+      "name": "BanglaMeta-Sim",
+      "rows": 273531,
+      "dim": 900,
+      "source": "eval\\merge_output\\merge_results\\models\\selected_pure_w2v.f16.npy",
+      "source_md5": "10aa206f8462c82a7b16cf60054be70f",
+      "served_md5": "afdfcdb981e66a3df0ac3c45ed534662",
+      "transform": {
+        "abtt_D": 4,
+        "weights": [
+          1.65,
+          0.0,
+          1.35
+        ],
+        "fit_rows": 50000,
+        "selected_by": "experiments/block_weights.py on the analogy TUNE half"
+      },
+      "pca_explained": [
+        0.0249,
+        0.0203,
+        0.0164
+      ]
+    },
+    "merged_plus": {
+      "name": "BanglaMeta+",
+      "rows": 273531,
+      "dim": 1200,
+      "source": "eval\\merge_output\\merge_results\\models\\selected_pure_w2v.f16.npy",
+      "source_md5": "10aa206f8462c82a7b16cf60054be70f",
+      "served_md5": "fd1fd540557ed9a9a6e64232bdaf8774",
+      "transform": {
+        "eps": 0.0005,
+        "parts": [
+          "merged News+Informal blocks",
+          "merged_sim News block",
+          "merged_sim Subs block"
+        ],
+        "selected_by": "experiments/combined.py on the analogy TUNE half"
+      },
+      "pca_explained": [
+        0.0249,
+        0.0203,
+        0.0164
+      ]
+    }
+  },
+  "checks": {
+    "union_vocab": true,
+    "news_block_min_cos": 0.9999998774507795,
+    "subs_rows": 177376,
+    "provenance_counts": {
+      "news": 187686,
+      "informal": 32910,
+      "subs": 177376
+    }
+  }
+}

@@ -1,0 +1,21 @@
+[   96s] dev BanglaMeta+     Overall 0.7716 [0.7647, 0.7788]
+[  132s] dev BanglaMeta      Overall 0.7712 [0.7640, 0.7782]
+[  166s] dev BanglaMeta-Sim  Overall 0.7625 [0.7553, 0.7696]
+[  185s] dev fastText-cc.bn  Overall 0.7620 [0.7546, 0.7693]
+[  197s] dev News-W2V        Overall 0.7485 [0.7409, 0.7561]
+[  203s] dev Informal-W2V    Overall 0.7304 [0.7225, 0.7377]
+[  288s] conf BanglaMeta+     Overall 0.7715 [0.7642, 0.7785]
+[  335s] conf BanglaMeta      Overall 0.7717 [0.7645, 0.7788]
+[  379s] conf BanglaMeta-Sim  Overall 0.7628 [0.7555, 0.7697]
+[  394s] conf fastText-cc.bn  Overall 0.7644 [0.7571, 0.7714]
+[  408s] conf News-W2V        Overall 0.7477 [0.7403, 0.7549]
+[  420s] conf Informal-W2V    Overall 0.7326 [0.7247, 0.7402]
+[  420s] CONF point estimates and 95% intervals reproduce the official thesis table exactly
+[  420s] paired bootstrap done
+[  466s] analogy BanglaMeta+     0.0898
+[  495s] analogy BanglaMeta      0.0600
+[  524s] analogy BanglaMeta-Sim  0.0899
+[  539s] analogy fastText-cc.bn  0.0757
+[  551s] analogy News-W2V        0.0627
+[  556s] analogy Informal-W2V    0.0081
+[  575s] wrote D:\Thesis\eval\banglameta_plus_eval

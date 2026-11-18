@@ -1,0 +1,50 @@
+{
+ "protocol": "Can re-weighting the three blocks of the frozen merged model improve word similarity and analogy?",
+ "grid_step": 0.05,
+ "K_candidates_per_block": 60,
+ "equal": {
+  "weights": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "tune": 0.07027221489387217,
+  "test": 0.06415637366590718,
+  "all": 0.06721429427988967,
+  "semantic": 0.060762509928514695,
+  "syntactic": 0.07000515375365057,
+  "sim_auc": 0.8777577479331516
+ },
+ "chosen": {
+  "weights": [
+   1.65,
+   0.15,
+   1.2
+  ],
+  "tune": 0.09173761841947475,
+  "test": 0.08382300035975537,
+  "all": 0.08778030938961506,
+  "semantic": 0.07545671167593328,
+  "syntactic": 0.09311114928706409,
+  "sim_auc": 0.8937188235310805
+ },
+ "references_thesis_dev": {
+  "fasttext": {
+   "analogy_native_acc": 0.0757285046168605,
+   "sim_auc": 0.8668536072867661
+  },
+  "news": {
+   "analogy_native_acc": 0.0627173522005036,
+   "sim_auc": 0.8809288477985531
+  },
+  "informal": {
+   "analogy_native_acc": 0.0080944957428948,
+   "sim_auc": 0.6920957146848703
+  },
+  "merged": {
+   "analogy_native_acc": 0.060019186952872,
+   "sim_auc": 0.8191003341564324
+  }
+ },
+ "variant": "abtt3"
+}

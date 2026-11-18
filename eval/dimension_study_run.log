@@ -1,0 +1,25 @@
+[     5s] variants: ['900 thesis (BanglaMeta)', '600 similarity view only', '1200 thesis + sim-News', '1200 thesis + sim-Subs', '1200 thesis(News+Inf) + sim', '1500 BanglaMeta+ (current)', '1800 + sim-Informal (0.15)', '1800 + sim equal weights', '300 PCA of BanglaMeta+', '500 PCA of BanglaMeta+']
+[    50s] part sentence vectors ready
+[   166s] 900 thesis (BanglaMeta)        dim  900  DEV 77.12 (train 83.56, gap 6.44)  CONF 77.17  analogy 6.00 (test half 5.62)  AUC 0.8191  PR 159  90% in 532  116s
+[   234s] 600 similarity view only       dim  600  DEV 76.25 (train 82.64, gap 6.39)  CONF 76.28  analogy 8.99 (test half 8.66)  AUC 0.8914  PR 239  90% in 449  68s
+[   459s] 1200 thesis + sim-News         dim 1200  DEV 77.23 (train 82.52, gap 5.30)  CONF 77.14  analogy 6.87 (test half 6.56)  AUC 0.8817  PR 148  90% in 230  225s
+[   725s] 1200 thesis + sim-Subs         dim 1200  DEV 76.95 (train 82.65, gap 5.69)  CONF 77.23  analogy 6.40 (test half 6.36)  AUC 0.8701  PR 198  90% in 247  266s
+[   876s] 1200 thesis(News+Inf) + sim    dim 1200  DEV 77.34 (train 82.57, gap 5.22)  CONF 77.22  analogy 8.96 (test half 8.62)  AUC 0.8913  PR 240  90% in 450  151s
+[  1114s] 1500 BanglaMeta+ (current)     dim 1500  DEV 77.16 (train 83.22, gap 6.06)  CONF 77.15  analogy 8.98 (test half 8.65)  AUC 0.8913  PR 240  90% in 450  238s
+[  1386s] 1800 + sim-Informal (0.15)     dim 1800  DEV 77.16 (train 83.78, gap 6.62)  CONF 77.29  analogy 8.86 (test half 8.45)  AUC 0.8928  PR 251  90% in 479  271s
+[  1747s] 1800 + sim equal weights       dim 1800  DEV 77.16 (train 83.78, gap 6.62)  CONF 77.29  analogy 6.62 (test half 6.30)  AUC 0.8818  PR 185  90% in 540  361s
+[  1804s] 300 PCA of BanglaMeta+         dim  300  DEV 75.40 (train 81.74, gap 6.33)  CONF 75.44  analogy 9.10 (test half 8.87)  AUC 0.8878  PR 150  90% in 236  57s
+[  1896s] 500 PCA of BanglaMeta+         dim  500  DEV 75.70 (train 83.21, gap 7.52)  CONF 75.77  analogy 9.05 (test half 8.81)  AUC 0.8868  PR 216  90% in 389  91s
+[  1938s] learning curve 600 similarity view only {'0.1': np.float64(71.37), '0.25': np.float64(73.95), '0.5': np.float64(75.12), '0.75': np.float64(75.71), '1.0': np.float64(76.25)}
+[  2031s] learning curve 900 thesis (BanglaMeta) {'0.1': np.float64(72.55), '0.25': np.float64(75.15), '0.5': np.float64(76.01), '0.75': np.float64(76.63), '1.0': np.float64(77.12)}
+[  2163s] learning curve 1500 BanglaMeta+ (current) {'0.1': np.float64(72.83), '0.25': np.float64(75.34), '0.5': np.float64(75.95), '0.75': np.float64(76.68), '1.0': np.float64(77.16)}
+[  2289s] learning curve 1800 + sim equal weights {'0.1': np.float64(72.75), '0.25': np.float64(75.12), '0.5': np.float64(76.04), '0.75': np.float64(76.63), '1.0': np.float64(77.16)}
+[  2291s] Informal-W2V {'corpus_tokens': 3192884, 'vocab': 32910, 'dims': 300, 'learned_parameters': 19746000, 'tokens_per_parameter': 0.1617, 'occurrences_per_word_median': 12.0, 'share_words_lt_20': 0.639, 'share_words_lt_50': 0.819, 'share_tokens_by_words_lt_20': 0.0601}
+[  2315s] News-W2V {'corpus_tokens': 65324912, 'vocab': 187686, 'dims': 300, 'learned_parameters': 112611600, 'tokens_per_parameter': 0.5801, 'occurrences_per_word_median': 15.0, 'share_words_lt_20': 0.5657, 'share_words_lt_50': 0.741, 'share_tokens_by_words_lt_20': 0.015}
+[  2324s] bands News-W2V {'0k-5k': 0.05847953216374269, '5k-20k': 0.07529064403026389, '20k-50k': 0.06606890042472864, '50k-200k': 0.10336871250576835, 'questions': {'0k-5k': 4617, '5k-20k': 5419, '20k-50k': 2119, '50k-200k': 2167}}
+[  2325s] bands Informal-W2V {'0k-5k': 0.01299545159194282, '5k-20k': 0.009226794611551946, '20k-50k': 0.011326097215667769, '50k-200k': 0.00046146746654360867, 'questions': {'0k-5k': 4617, '5k-20k': 5419, '20k-50k': 2119, '50k-200k': 2167}}
+[  2337s] bands fastText-cc.bn {'0k-5k': 0.11197747455057397, '5k-20k': 0.042812326997601034, '20k-50k': 0.10523831996224635, '50k-200k': 0.11628980156898938, 'questions': {'0k-5k': 4617, '5k-20k': 5419, '20k-50k': 2119, '50k-200k': 2167}}
+[  2358s] bands BanglaMeta {'0k-5k': 0.0632445310807884, '5k-20k': 0.08267207971950544, '20k-50k': 0.04058518168947617, '50k-200k': 0.08075680664513152, 'questions': {'0k-5k': 4617, '5k-20k': 5419, '20k-50k': 2119, '50k-200k': 2167}}
+[  2380s] bands BanglaMeta-Sim {'0k-5k': 0.10353043101581114, '5k-20k': 0.12179368887248569, '20k-50k': 0.07126002831524304, '50k-200k': 0.09690816797415783, 'questions': {'0k-5k': 4617, '5k-20k': 5419, '20k-50k': 2119, '50k-200k': 2167}}
+[  2411s] bands BanglaMeta+ {'0k-5k': 0.10353043101581114, '5k-20k': 0.12142461708802361, '20k-50k': 0.07126002831524304, '50k-200k': 0.09736963544070143, 'questions': {'0k-5k': 4617, '5k-20k': 5419, '20k-50k': 2119, '50k-200k': 2167}}
+[  2412s] done

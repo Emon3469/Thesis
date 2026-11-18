@@ -1,0 +1,22 @@
+classification {'D1_F1': 0.8838, 'D2_F1': 0.6593, 'Overall_F1': 0.7716, 'F1_news_topic_7': 0.8838, 'F1_review_sentiment_3': 0.5778, 'F1_social_sentiment_3': 0.5865, 'F1_hate_binary_2': 0.8137} 12s
+rows 32,768 139s
+rows 65,536 215s
+rows 98,304 319s
+rows 131,072 406s
+rows 163,840 475s
+rows 196,608 540s
+rows 200,000 544s
+{'eps': 0.0, 'tune': 0.0932, 'test': 0.0866, 'all': 0.0899, 'semantic': 0.078, 'sim_auc': 0.8914}
+{'eps': 0.001, 'tune': 0.0931, 'test': 0.0866, 'all': 0.0898, 'semantic': 0.078, 'sim_auc': 0.8914}
+{'eps': 0.002, 'tune': 0.0931, 'test': 0.0866, 'all': 0.0898, 'semantic': 0.078, 'sim_auc': 0.8914}
+{'eps': 0.005, 'tune': 0.0932, 'test': 0.0865, 'all': 0.0898, 'semantic': 0.0778, 'sim_auc': 0.8913}
+{'eps': 0.01, 'tune': 0.0931, 'test': 0.0863, 'all': 0.0897, 'semantic': 0.0776, 'sim_auc': 0.8912}
+{'eps': 0.02, 'tune': 0.0928, 'test': 0.0862, 'all': 0.0895, 'semantic': 0.0776, 'sim_auc': 0.8909}
+{'eps': 0.05, 'tune': 0.0923, 'test': 0.0854, 'all': 0.0889, 'semantic': 0.0772, 'sim_auc': 0.89}
+{'eps': 0.1, 'tune': 0.0919, 'test': 0.0853, 'all': 0.0886, 'semantic': 0.0766, 'sim_auc': 0.8883}
+{'eps': 0.15, 'tune': 0.0903, 'test': 0.0839, 'all': 0.0871, 'semantic': 0.0755, 'sim_auc': 0.8863}
+{'eps': 0.2, 'tune': 0.089, 'test': 0.0825, 'all': 0.0857, 'semantic': 0.0753, 'sim_auc': 0.8838}
+{'eps': 0.3, 'tune': 0.0879, 'test': 0.08, 'all': 0.0839, 'semantic': 0.0757, 'sim_auc': 0.8777}
+{'eps': 0.5, 'tune': 0.0819, 'test': 0.0784, 'all': 0.0802, 'semantic': 0.0751, 'sim_auc': 0.8618}
+chosen {'eps': 0.005, 'tune': 0.09317663988487829, 'test': 0.08646120637966183, 'all': 0.08981892313227005, 'semantic': 0.0778395552025417, 'sim_auc': 0.8913121986954283}
+done 545s

@@ -1,0 +1,19 @@
+== tests
+........................................................................ [ 42%]
+........................................................................ [ 85%]
+.........................                                                [100%]
+169 passed in 277.34s (0:04:37)
+== evaluate
+[  707s] analogy fastText-cc.bn  0.0757
+[  734s] analogy News-W2V        0.0627
+[  744s] analogy Informal-W2V    0.0081
+[  770s] wrote D:\Thesis\eval\banglameta_plus_eval
+== report
+figures: 9 | report: D:\Thesis\eval\banglameta_plus_eval\BanglaMeta_plus_evaluation.pdf 1305992 bytes
+rank summary: [('DEV Overall macro-F1 %', 1), ('CONF Overall macro-F1 %', 1), ('DEV news D1 %', 1), ('DEV informal D2 %', 1), ('CONF news D1 %', 1), ('CONF informal D2 %', 2), ('CONF News topic (7 classes) %', 1), ('CONF Review sentiment (3) %', 3), ('CONF Social sentiment (3) %', 2), ('CONF Hate speech (2) %', 2), ('Analogy, native %', 2), ('Analogy, semantic %', 1), ('Analogy, syntactic %', 2), ('Analogy, Mikolov set %', 1), ('Similarity AUC', 2), ('Token coverage, news %', 1), ('Token coverage, informal %', 2), ('P(best), CONF %', 1)]
+== exercises
+20 problems, all assertions passed -> D:\Thesis\docs\math_exercises\BanglaMeta_Math_Exercises.html
+PDF: D:\Thesis\docs\math_exercises\BanglaMeta_Math_Exercises.pdf 370525 bytes
+== notebook
+27 cells -> D:\Thesis\eval\banglameta_plus\BanglaMeta_plus.ipynb
+notebook executed

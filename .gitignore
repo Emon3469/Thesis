@@ -12,6 +12,10 @@
 /models/**
 !/models/merged_w2v_T_conc/
 !/models/merged_w2v_T_conc/README.md
+!/models/banglameta_plus/
+/models/banglameta_plus/*
+!/models/banglameta_plus/README.md
+!/models/banglameta_plus/*.md5
 *.npy
 *.npz
 *.bin
@@ -48,3 +52,21 @@ __pycache__/
 /presentation/build/node_modules/
 /presentation/build/pylib/
 /presentation/build/render/
+
+# ---- web app: generated model copies, downloads and build output
+/webapp/data/models/
+/webapp/data/raw/
+/webapp/.npmcache/
+/webapp/frontend/node_modules/
+/webapp/frontend/dist/
+/webapp/frontend/*.tsbuildinfo
+__pycache__/
+.pytest_cache/
+
+# ---- large model exports
+/models/banglameta_plus/*.bin
+/eval/banglameta_plus/work/
+/models/banglameta_plus/archive_1500d/
+/presentation/build/tmp/
+/eval/dimension_study/cache/
+/eval/banglameta_plus/run.log

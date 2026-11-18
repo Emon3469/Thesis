@@ -11,6 +11,8 @@ This repository contains the full, reproducible pipeline of an MSc thesis on *me
 - selecting a model by a rule fixed in advance;
 - a single confirmation test on data never used for any choice.
 
+**Post-thesis extension (§14):** **BanglaMeta+**, a 1,200-d embedding built from the frozen merged model. It keeps the merged model's classification accuracy and adds the best word-analogy and word-similarity scores of the evaluated models. An interactive web app (`webapp/`) serves it.
+
 Every number in this README comes from a CSV or JSON in this repository. Each stage has an independent verification script (`eval/verify_*.py`), and all of them pass.
 
 ---
@@ -30,6 +32,7 @@ Every number in this README comes from a CSV or JSON in this repository. Each st
 11. [Reproducing the experiments](#11-reproducing-the-experiments)
 12. [Limitations](#12-limitations)
 13. [Sources and references](#13-sources-and-references)
+14. [BanglaMeta+ (1,200-d): post-thesis extension and web app](#14-banglameta-1200-d-post-thesis-extension-and-web-app)
 
 ---
 
@@ -68,6 +71,9 @@ README.md                      this file
 EXECUTION_PLAN.md              the pre-registered research plan
 RESEARCH_DIRECTION.md          scope and positioning of the thesis
 models/merged_w2v_T_conc/      model card of the final merged model (weights not stored on GitHub, see §10)
+models/banglameta_plus/        model card + MD5 of BanglaMeta+ 1,200-d (weights rebuilt by the notebook, see §14)
+webapp/                        FastAPI backend + React/three.js frontend serving the models (tests in webapp/backend/tests)
+docs/                          mathematics exercise set with worked solutions, README table generator
 eval/
   build_eval_set.py            loaders and cleaning for every source dataset
   build_w2v_data.py            builds the evaluation set (DEV/CONF) and the two training corpora
@@ -90,6 +96,9 @@ eval/
   MERGE_PROOF.md               the merge formula and its 10 theorems
   MERGE_RESULTS.md             report of Step 4
   CONF_RESULTS.md              report of Steps 6-7
+  banglameta_plus/             BanglaMeta_plus_1200d.ipynb: builds, evaluates and exports BanglaMeta+ (source: banglameta_plus_src.py)
+  banglameta_plus_eval/        full evaluation of BanglaMeta+ (report PDF, figures, metrics_matrix.csv, results.json)
+  dimension_study/             over/under-fitting and dimension study (report PDF, figures, results.json)
   preeval/                     earlier exploratory stage with sentence encoders (BanglaBERT, mE5, ...)
   notebook_src.py, candidates_src.py, mini_*.py, preeval*.py   code of that earlier stage
 ```
@@ -358,7 +367,11 @@ Use the same tokenizer as the experiments (`tokenize.py`, shown in `eval/build_w
 
 **Good for:** features for Bangla text classification across news and informal text.
 
-**Not the best choice for:** word similarity and analogy, where News-W2V and fastText score higher (§12).
+**Not the best choice for:** word similarity and analogy, where News-W2V and fastText score higher (§12). For those, use **BanglaMeta+** (§14), which keeps the classification accuracy and leads on analogy and similarity:
+
+```python
+kv = KeyedVectors.load_word2vec_format("models/banglameta_plus/banglameta_plus_1200d.bin", binary=True)   # 273531 x 1200
+```
 
 ---
 
@@ -390,7 +403,7 @@ python eval/verify_conf.py
 
 ## 12. Limitations
 
-- **The gain is for classification only.** The merged model's similarity AUC is 0.819 (News-W2V: 0.881) and its analogy accuracy is 0.060 (fastText: 0.076). The noisier Informal-W2V block lowers the intrinsic scores, which is the limit case of Theorem 6.
+- **The thesis model's gain is for classification only.** Its similarity AUC is 0.819 (News-W2V: 0.881) and its analogy accuracy is 0.060 (fastText: 0.076). The noisier Informal-W2V block lowers the intrinsic scores, which is the limit case of Theorem 6. BanglaMeta+ (§14) removes this limitation: analogy 0.0898, similarity AUC 0.8914. Its CONF result is exploratory, because it was built after the confirmatory test.
 - **The gain over fastText is small** (+0.7 points Overall) though significant. It comes from informal text; on news the merged model and fastText are equal.
 - **The probe is linear.** It runs on averaged static vectors, so it measures embedding quality, not the best accuracy reachable with fine-tuned models.
 - **Not compared with transformers on this benchmark.** BanglaBERT, multilingual E5 and others were explored only in an earlier stage on a different evaluation set (`eval/preeval/`). No claim of being the best Bangla model overall is made.
@@ -415,3 +428,99 @@ python eval/verify_conf.py
 - Bollegala (2022), *Learning Meta Word Embeddings by Unsupervised Weighted Concatenation of Source Embeddings*: https://scispace.com/papers/learning-meta-word-embeddings-by-unsupervised-weighted-x4edqcl9
 - Jawanpuria et al. (2020), *Learning Geometric Word Meta-Embeddings*: https://scispace.com/papers/learning-geometric-word-meta-embeddings-1z33jexmcs
 - Raunak et al. (2019), *Effective Dimensionality Reduction for Word Embeddings*: https://scispace.com/papers/effective-dimensionality-reduction-for-word-embeddings-1ht9cklr8o
+- Mu & Viswanath (2018), *All-but-the-Top: Simple and Effective Postprocessing for Word Representations* (used by BanglaMeta+): https://scispace.com/papers/all-but-the-top-simple-and-effective-postprocessing-for-word-5e3j95bkmx
+
+---
+
+<!-- BANGLAMETA_PLUS:START (generated by docs/make_readme_tables.py; do not edit by hand) -->
+## 14. BanglaMeta+ (1,200-d): post-thesis extension and web app
+
+**BanglaMeta+** is one vector per word, built from the frozen thesis model alone, with no training and no other model's vectors:
+
+`c(w) = [ √0.0005 · m_NI(w) ; √0.9995 · s_News(w) ; √0.9995 · s_Subs(w) ]`
+
+- **m_NI(w):** the thesis row's News-W2V and Informal-W2V blocks, re-normalised (600-d).
+- **s(w):** the similarity view, 600-d. In each 300-d block, the mean and the top 4 principal directions are removed ("all-but-the-top"); then the blocks are weighted News 1.65 / Subs 1.35 (the Informal block gets weight 0).
+- **Classification:** the probe standardises every feature, so the small weight costs the thesis features nothing (Theorem 5).
+- **Word similarity:** cosine = 0.0005 × thesis cosine + 0.9995 × similarity-view cosine.
+- **How the settings were chosen:** D, the block weights and ε were chosen on a random half of the analogy questions; ties go to the smaller ε.
+
+| | |
+|---|---|
+| File | `models/banglameta_plus/banglameta_plus_1200d.bin` (word2vec binary, 273,531 × 1,200, float32; not on GitHub, rebuilt by the notebook) |
+| MD5 | `a30a9c38b5a7964fa5ab2d4b44f2c701` |
+| Notebook | [`eval/banglameta_plus/BanglaMeta_plus_1200d.ipynb`](eval/banglameta_plus/BanglaMeta_plus_1200d.ipynb): rebuilds the file byte for byte and evaluates it |
+| Recipe / export | `webapp/backend/prepare.py` · `webapp/backend/experiments/export_plus.py` |
+| Rank among the 6 models | DEV F1 #1 · CONF F1 #1 · Analogy #2 · Similarity AUC #1 (tied) |
+
+### 14.1 All models, measured the same way
+
+Macro-F1 % uses the thesis probe. CONF intervals come from the thesis's 10,000-sample paired bootstrap, and they reproduce the official thesis CONF table exactly. CONF values of BanglaMeta+ and BanglaMeta-Sim are **exploratory**, because both were built after the confirmatory test. The analogy column also gives the number of questions solved, out of 16,678. Bold marks the best value in each column.
+
+| Model | dims | DEV F1 | CONF F1 [95% CI] | CONF news D1 | CONF informal D2 | Analogy (native) | Semantic | Syntactic | Similarity AUC | Informal coverage |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **BanglaMeta+** | 1,200 | **77.34** | **77.22** [76.49, 77.92] | **88.61** | 65.83 | 8.98% (1,498) | **7.80**% | 9.49% | **0.8914** | 94.90% |
+| BanglaMeta | 900 | 77.12 | 77.17 [76.45, 77.88] | 88.40 | **65.95** | 6.00% (1,001) | 6.53% | 5.77% | 0.8191 | 94.90% |
+| BanglaMeta-Sim | 900 | 76.25 | 76.28 [75.55, 76.97] | 88.39 | 64.18 | **8.99**% (1,499) | **7.80**% | **9.50**% | **0.8914** | 94.90% |
+| fastText-cc.bn | 300 | 76.20 | 76.44 [75.71, 77.14] | 88.15 | 64.74 | 7.57% (1,262) | 4.09% | 9.07% | 0.8669 | **96.08**% |
+| News-W2V | 300 | 74.85 | 74.77 [74.03, 75.49] | 87.91 | 61.62 | 6.27% (1,045) | 6.18% | 6.30% | 0.8809 | 91.24% |
+| Informal-W2V | 300 | 73.04 | 73.26 [72.47, 74.02] | 80.73 | 65.79 | 0.81% (135) | 0.42% | 0.98% | 0.6921 | 91.38% |
+
+### 14.2 Is BanglaMeta+ really better? (paired, same texts)
+
+| BanglaMeta+ vs | Δ CONF Overall F1 [95% CI] | one-sided p | Analogy questions only BanglaMeta+ solves | only the other solves | McNemar p |
+|---|---|---|---|---|---|
+| BanglaMeta | +0.05 [-0.26, +0.35] (tie) | 0.3826 | 682 | 185 | 7.2e-68 |
+| BanglaMeta-Sim | +0.94 [+0.50, +1.37] (better) | 0.0001 | 0 | 1 | 1.0e+00 |
+| fastText-cc.bn | +0.78 [+0.25, +1.31] (better) | 0.0027 | 997 | 761 | 9.9e-09 |
+| News-W2V | +2.45 [+1.95, +2.96] (better) | 0.0001 | 682 | 229 | 3.2e-53 |
+| Informal-W2V | +3.96 [+3.37, +4.58] (better) | 0.0001 | 1,389 | 26 | < 1e-300 |
+
+### 14.3 Why 1,200 dimensions: every option scored the same way
+
+No Word2Vec here was trained with more than 300 dimensions. The larger sizes are separately trained 300-d models joined together. Full report: [`eval/dimension_study/Dimension_and_overfitting_study.pdf`](eval/dimension_study/Dimension_and_overfitting_study.pdf).
+
+| Option | DEV F1 | CONF F1 | Analogy (all) | Analogy (unseen half) | Similarity AUC | Train–held-out gap (points) | Dims holding 90% of variance |
+|---|---|---|---|---|---|---|---|
+| 300 (PCA/SVD of the 1,500-d model) | 75.40 | 75.44 | 9.10% | 8.87% | 0.8878 | 6.33 | 236 |
+| 500 (PCA/SVD of the 1,500-d model) | 75.70 | 75.77 | 9.05% | 8.81% | 0.8868 | 7.52 | 389 |
+| 600 similarity view only | 76.25 | 76.28 | 8.99% | 8.66% | 0.8914 | 6.39 | 449 |
+| 900 thesis BanglaMeta | 77.12 | 77.17 | 6.00% | 5.62% | 0.8191 | 6.44 | 532 |
+| 1,200 thesis + similarity News block | 77.23 | 77.14 | 6.87% | 6.56% | 0.8817 | 5.30 | 230 |
+| 1,200 thesis + similarity Subs block | 76.95 | 77.23 | 6.40% | 6.36% | 0.8701 | 5.69 | 247 |
+| **1,200 BanglaMeta+ (current)** | 77.34 | 77.22 | 8.98% | 8.66% | 0.8914 | 5.22 | 450 |
+| 1,500 previous BanglaMeta+ | 77.16 | 77.15 | 8.98% | 8.65% | 0.8913 | 6.06 | 450 |
+| 1,800 + Informal similarity block (weight 0.15) | 77.16 | 77.29 | 8.86% | 8.45% | 0.8928 | 6.62 | 479 |
+| 1,800 + all similarity blocks, equal weights | 77.16 | 77.29 | 6.62% | 6.30% | 0.8818 | 6.62 | 540 |
+
+- **Why 1,200 replaced the 1,500-d version:** dropping Subs2vec from the thesis part keeps or improves every score with 300 fewer dimensions. Subs2vec adds no significant classification information (check P2). The same number of analogy questions is solved, 1,498.
+- **Over-fitting:** the CONF score does not drop below DEV. The train–held-out gap does not grow with dimension, and the 1,200-d model has the smallest gap. Learning curves are still rising at 100% data.
+- **SVD/PCA compression** lowers classification and similarity, so it is not used. The thesis model never used it either; it lost in Step 4.
+
+### 14.4 Under-fitting of the source models
+
+| Source model (300-d) | Training tokens | Learned parameters (2 × vocab × 300) | Tokens per parameter | Words seen < 20 times | Diagnosis |
+|---|---|---|---|---|---|
+| News-W2V | 65,324,912 | 112,611,600 | 0.58 | 56.6% | trained enough; no rare-word collapse |
+| Informal-W2V | 3,192,884 | 19,746,000 | 0.16 | 63.9% | under-trained: ~1% analogy in every frequency band → weight 0 for word similarity, kept for classification |
+| Subs2vec-w2 | not published (OpenSubtitles 2018) | 2 × 177,376 × 300 | – | – | downloaded; strong for word similarity |
+
+### 14.5 How ε was chosen (analogy tune half; the unseen half was not used)
+
+| ε (thesis share of the cosine) | Analogy, tune half | Analogy, unseen half | Analogy, all | Similarity AUC |
+|---|---|---|---|---|
+| 0.0005 ← chosen | 9.31% | 8.66% | 8.98% | 0.8914 |
+| 0.001 | 9.31% | 8.66% | 8.98% | 0.8914 |
+| 0.002 | 9.31% | 8.63% | 8.97% | 0.8914 |
+| 0.003 | 9.31% | 8.63% | 8.97% | 0.8913 |
+| 0.005 | 9.31% | 8.62% | 8.96% | 0.8913 |
+| 0.01 | 9.31% | 8.61% | 8.96% | 0.8911 |
+
+### 14.6 Web app
+
+`webapp/` serves BanglaMeta+ (default), the thesis model and the baselines through a FastAPI backend and a React + three.js frontend:
+- 3-D explorer with X/Y/Z axes, Bangla/Banglish input, relations, similarity, analogy;
+- a comparison page with live benchmarks.
+
+Every answer is computed from the served model rows. Unknown words are reported, never invented. 169 backend tests check every answer against independent calculations. See [`webapp/README.md`](webapp/README.md).
+<!-- BANGLAMETA_PLUS:END -->

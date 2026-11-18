@@ -1,0 +1,9 @@
+[     2s] variants: ['900 thesis (BanglaMeta)', '600 similarity view only', '1200 thesis + sim-News', '1200 thesis + sim-Subs', '1200 thesis(News+Inf) + sim', '1500 BanglaMeta+ (current)', '1800 + sim-Informal (0.15)', '1800 + sim equal weights', '300 PCA of BanglaMeta+', '500 PCA of BanglaMeta+']
+[     6s] part sentence vectors ready
+[   185s] {'eps': 0.0005, 'tune': 0.09305672142942799, 'test': 0.08658112483511213, 'all': 0.08981892313227005, 'correct': 1498, 'sim_auc': 0.8914286783091913}
+[   185s] {'eps': 0.001, 'tune': 0.09305672142942799, 'test': 0.08658112483511213, 'all': 0.08981892313227005, 'correct': 1498, 'sim_auc': 0.8914073148488283}
+[   185s] {'eps': 0.002, 'tune': 0.09305672142942799, 'test': 0.08634128792421153, 'all': 0.08969900467681977, 'correct': 1496, 'sim_auc': 0.8913674245701423}
+[   185s] {'eps': 0.003, 'tune': 0.09305672142942799, 'test': 0.08634128792421153, 'all': 0.08969900467681977, 'correct': 1496, 'sim_auc': 0.8913308141588151}
+[   185s] {'eps': 0.005, 'tune': 0.09305672142942799, 'test': 0.08622136946876124, 'all': 0.08963904544909461, 'correct': 1495, 'sim_auc': 0.8912622028794754}
+[   185s] {'eps': 0.01, 'tune': 0.09305672142942799, 'test': 0.08610145101331095, 'all': 0.08957908622136947, 'correct': 1494, 'sim_auc': 0.8910756936653529}
+[   258s] chosen eps 0.01: analogy 8.96 (1494 correct, test half 8.61)  AUC 0.8911  DEV 77.34  CONF 77.22  gap 5.22

@@ -1,0 +1,43 @@
+[     2s] needed words: 139842
+[    83s] Subs2vec-w2 rows: 177376
+[    91s] merged: 273,531 x 900  source md5 10aa206f8462c82a7b16cf60054be70f  |norm-1| max 5.46e-05
+[    93s] fasttext: 234,474 x 300  source md5 9de22ef3fdc74ce3e1741a0cf5494128  |norm-1| max 2.45e-04
+[    95s] news: 187,686 x 300  source md5 e43195c774d403511a67b7ce83987d7a  |norm-1| max 9.58e-05
+[    97s] informal: 32,910 x 300  source md5 ec33a3960d435d361e5aadcdb2a08786  |norm-1| max 8.41e-05
+[    97s] merged vocabulary == union(News-W2V, Informal-W2V, Subs2vec-w2) in thesis order: OK
+[    98s] News block check on 447 words: min cosine 1.000000
+[   120s] merged_sim written
+[   136s] merged_plus written
+[   160s] wrote D:\Thesis\webapp\data\manifest.json
+[  0%] BanglaMeta+: analogy (3CosAdd over 200,000 rows)
+[  4%] BanglaMeta+: similarity AUC
+[  8%] BanglaMeta+: DEV linear probe (4 tasks x 5 folds)
+[ 12%] BanglaMeta+: CONF linear probe (4 tasks x 5 folds)
+[ 17%] BanglaMeta: analogy (3CosAdd over 200,000 rows)
+[ 21%] BanglaMeta: similarity AUC
+[ 25%] BanglaMeta: DEV linear probe (4 tasks x 5 folds)
+[ 29%] BanglaMeta: CONF linear probe (4 tasks x 5 folds)
+[ 33%] BanglaMeta-Sim: analogy (3CosAdd over 200,000 rows)
+[ 38%] BanglaMeta-Sim: similarity AUC
+[ 42%] BanglaMeta-Sim: DEV linear probe (4 tasks x 5 folds)
+[ 46%] BanglaMeta-Sim: CONF linear probe (4 tasks x 5 folds)
+[ 50%] fastText-cc.bn: analogy (3CosAdd over 200,000 rows)
+[ 54%] fastText-cc.bn: similarity AUC
+[ 58%] fastText-cc.bn: DEV linear probe (4 tasks x 5 folds)
+[ 62%] fastText-cc.bn: CONF linear probe (4 tasks x 5 folds)
+[ 67%] News-W2V: analogy (3CosAdd over 187,686 rows)
+[ 71%] News-W2V: similarity AUC
+[ 75%] News-W2V: DEV linear probe (4 tasks x 5 folds)
+[ 79%] News-W2V: CONF linear probe (4 tasks x 5 folds)
+[ 83%] Informal-W2V: analogy (3CosAdd over 32,910 rows)
+[ 88%] Informal-W2V: similarity AUC
+[ 92%] Informal-W2V: DEV linear probe (4 tasks x 5 folds)
+[ 96%] Informal-W2V: CONF linear probe (4 tasks x 5 folds)
+[100%] done
+merged_plus analogy 0.0898 (thesis nan)  simAUC 0.8914 (nan)  D1 0.8835 (nan)  D2 0.6634 (nan)  Overall 0.7734 (nan)
+merged    analogy 0.0600 (thesis 0.0600)  simAUC 0.8191 (0.8191)  D1 0.8823 (0.8823)  D2 0.6601 (0.6601)  Overall 0.7712 (0.7712)
+merged_sim analogy 0.0899 (thesis nan)  simAUC 0.8914 (nan)  D1 0.8779 (nan)  D2 0.6471 (nan)  Overall 0.7625 (nan)
+fasttext  analogy 0.0757 (thesis 0.0757)  simAUC 0.8669 (0.8669)  D1 0.8793 (0.8793)  D2 0.6447 (0.6447)  Overall 0.7620 (0.7620)
+news      analogy 0.0627 (thesis 0.0627)  simAUC 0.8809 (0.8809)  D1 0.8742 (0.8742)  D2 0.6227 (0.6227)  Overall 0.7485 (0.7485)
+informal  analogy 0.0081 (thesis 0.0081)  simAUC 0.6921 (0.6921)  D1 0.8154 (0.8154)  D2 0.6454 (0.6454)  Overall 0.7304 (0.7304)
+wrote D:\Thesis\models\banglameta_plus\banglameta_plus_1200d.bin (1.23 GiB), md5 a30a9c38b5a7964fa5ab2d4b44f2c701; gensim round trip on 5,000 rows exact

@@ -1,0 +1,696 @@
+{
+ "variants": {
+  "900 thesis (BanglaMeta)": {
+   "dim": 900,
+   "about": "the frozen thesis rows",
+   "dev": {
+    "Overall": 0.7712139949694425,
+    "D1": 0.8823086901977665,
+    "D2": 0.6601192997411185,
+    "train_Overall": 0.8356178397259231,
+    "gap": 0.06440384475648053,
+    "alpha": {
+     "news_topic_7": 1000.0,
+     "review_sentiment_3": 3162.2776601683795,
+     "social_sentiment_3": 3162.2776601683795,
+     "hate_binary_2": 10000.0
+    },
+    "per_task": {
+     "news_topic_7": 0.8823086901977665,
+     "review_sentiment_3": 0.5893228569364857,
+     "social_sentiment_3": 0.5787632368321393,
+     "hate_binary_2": 0.8122718054547303
+    }
+   },
+   "conf": {
+    "Overall": 0.7717293994952619,
+    "D1": 0.8839977350508537,
+    "D2": 0.65946106393967,
+    "train_Overall": 0.8359313567050692,
+    "gap": 0.06420195720980737,
+    "alpha": {
+     "news_topic_7": 1000.0,
+     "review_sentiment_3": 3162.2776601683795,
+     "social_sentiment_3": 3162.2776601683795,
+     "hate_binary_2": 3162.2776601683795
+    },
+    "per_task": {
+     "news_topic_7": 0.8839977350508537,
+     "review_sentiment_3": 0.5969086820276158,
+     "social_sentiment_3": 0.5895736923473055,
+     "hate_binary_2": 0.7919008174440885
+    }
+   },
+   "analogy_all": 0.06001918695287205,
+   "analogy_tune": 0.0637966182995563,
+   "analogy_test": 0.05624175560618779,
+   "sim_auc": 0.8190989158354125,
+   "participation_ratio": 158.5233154296875,
+   "dims_90pct": 532
+  },
+  "600 similarity view only": {
+   "dim": 600,
+   "about": "BanglaMeta-Sim without its empty block",
+   "dev": {
+    "Overall": 0.7624992676202115,
+    "D1": 0.877889303511237,
+    "D2": 0.647109231729186,
+    "train_Overall": 0.8264041616671018,
+    "gap": 0.06390489404689037,
+    "alpha": {
+     "news_topic_7": 1000.0,
+     "review_sentiment_3": 3162.2776601683795,
+     "social_sentiment_3": 3162.2776601683795,
+     "hate_binary_2": 3162.2776601683795
+    },
+    "per_task": {
+     "news_topic_7": 0.877889303511237,
+     "review_sentiment_3": 0.5768205856615998,
+     "social_sentiment_3": 0.5611943590582005,
+     "hate_binary_2": 0.8033127504677579
+    }
+   },
+   "conf": {
+    "Overall": 0.7628494354959738,
+    "D1": 0.8838895860456714,
+    "D2": 0.6418092849462762,
+    "train_Overall": 0.8271090747914409,
+    "gap": 0.06425963929546707,
+    "alpha": {
+     "news_topic_7": 1000.0,
+     "review_sentiment_3": 3162.2776601683795,
+     "social_sentiment_3": 3162.2776601683795,
+     "hate_binary_2": 3162.2776601683795
+    },
+    "per_task": {
+     "news_topic_7": 0.8838895860456714,
+     "review_sentiment_3": 0.5652043101966279,
+     "social_sentiment_3": 0.5598116960757505,
+     "hate_binary_2": 0.8004118485664502
+    }
+   },
+   "analogy_all": 0.08987888235999521,
+   "analogy_tune": 0.09317663988487829,
+   "analogy_test": 0.08658112483511213,
+   "sim_auc": 0.8914459197740898,
+   "participation_ratio": 239.4374542236328,
+   "dims_90pct": 449
+  },
+  "1200 thesis + sim-News": {
+   "dim": 1200,
+   "about": "Subs2vec similarity block dropped",
+   "dev": {
+    "Overall": 0.7722867364768371,
+    "D1": 0.8831230608832078,
+    "D2": 0.6614504120704665,
+    "train_Overall": 0.825247412141937,
+    "gap": 0.05296067566509988,
+    "alpha": {
+     "news_topic_7": 1000.0,
+     "review_sentiment_3": 10000.0,
+     "social_sentiment_3": 10000.0,
+     "hate_binary_2": 10000.0
+    },
+    "per_task": {
+     "news_topic_7": 0.8831230608832078,
+     "review_sentiment_3": 0.5844451199305375,
+     "social_sentiment_3": 0.5858132370238961,
+     "hate_binary_2": 0.8140928792569659
+    }
+   },
+   "conf": {
+    "Overall": 0.7713894369260701,
+    "D1": 0.8860395052252367,
+    "D2": 0.6567393686269034,
+    "train_Overall": 0.8273975177407139,
+    "gap": 0.05600808081464381,
+    "alpha": {
+     "news_topic_7": 1000.0,
+     "review_sentiment_3": 10000.0,
+     "social_sentiment_3": 10000.0,
+     "hate_binary_2": 10000.0
+    },
+    "per_task": {
+     "news_topic_7": 0.8860395052252367,
+     "review_sentiment_3": 0.5839256153067063,
+     "social_sentiment_3": 0.589081962517152,
+     "hate_binary_2": 0.797210528056852
+    }
+   },
+   "analogy_all": 0.0686533157452932,
+   "analogy_tune": 0.07171123635927569,
+   "analogy_test": 0.06559539513131071,
+   "sim_auc": 0.881664779117776,
+   "participation_ratio": 147.7874755859375,
+   "dims_90pct": 230
+  },
+  "1200 thesis + sim-Subs": {
+   "dim": 1200,
+   "about": "News similarity block dropped",
+   "dev": {
+    "Overall": 0.7695149454607453,
+    "D1": 0.882433852177736,
+    "D2": 0.6565960387437547,
+    "train_Overall": 0.8264610172124005,
+    "gap": 0.056946071751655225,
+    "alpha": {
+     "news_topic_7": 1000.0,
+     "review_sentiment_3": 10000.0,
+     "social_sentiment_3": 10000.0,
+     "hate_binary_2": 10000.0
+    },
+    "per_task": {
+     "news_topic_7": 0.882433852177736,
+     "review_sentiment_3": 0.5712980162525357,
+     "social_sentiment_3": 0.5851832129386066,
+     "hate_binary_2": 0.8133068870401216
+    }
+   },
+   "conf": {
+    "Overall": 0.7722896058646183,
+    "D1": 0.886008643178416,
+    "D2": 0.6585705685508206,
+    "train_Overall": 0.8311296931160049,
+    "gap": 0.058840087251386675,
+    "alpha": {
+     "news_topic_7": 1000.0,
+     "review_sentiment_3": 10000.0,
+     "social_sentiment_3": 10000.0,
+     "hate_binary_2": 10000.0
+    },
+    "per_task": {
+     "news_topic_7": 0.886008643178416,
+     "review_sentiment_3": 0.5909461519438962,
+     "social_sentiment_3": 0.5879538272498878,
+     "hate_binary_2": 0.7968117264586779
+    }
+   },
+   "analogy_all": 0.0640364552104569,
+   "analogy_tune": 0.06451612903225806,
+   "analogy_test": 0.06355678138865571,
+   "sim_auc": 0.8700962437186107,
+   "participation_ratio": 198.09722900390625,
+   "dims_90pct": 247
+  },
+  "1200 thesis(News+Inf) + sim": {
+   "dim": 1200,
+   "about": "Subs2vec removed from the thesis part",
+   "dev": {
+    "Overall": 0.7734181672724586,
+    "D1": 0.8834633961643902,
+    "D2": 0.663372938380527,
+    "train_Overall": 0.825654059212658,
+    "gap": 0.0522358919401994,
+    "alpha": {
+     "news_topic_7": 1000.0,
+     "review_sentiment_3": 10000.0,
+     "social_sentiment_3": 10000.0,
+     "hate_binary_2": 10000.0
+    },
+    "per_task": {
+     "news_topic_7": 0.8834633961643902,
+     "review_sentiment_3": 0.5839608574176122,
+     "social_sentiment_3": 0.5929753756268541,
+     "hate_binary_2": 0.8131825820971149
+    }
+   },
+   "conf": {
+    "Overall": 0.7722094712038376,
+    "D1": 0.8861280506553173,
+    "D2": 0.658290891752358,
+    "train_Overall": 0.8284400059570265,
+    "gap": 0.05623053475318884,
+    "alpha": {
+     "news_topic_7": 1000.0,
+     "review_sentiment_3": 10000.0,
+     "social_sentiment_3": 10000.0,
+     "hate_binary_2": 10000.0
+    },
+    "per_task": {
+     "news_topic_7": 0.8861280506553173,
+     "review_sentiment_3": 0.5833628217458547,
+     "social_sentiment_3": 0.5911334204991848,
+     "hate_binary_2": 0.8003764330120344
+    }
+   },
+   "analogy_all": 0.08963904544909461,
+   "analogy_tune": 0.09305672142942799,
+   "analogy_test": 0.08622136946876124,
+   "sim_auc": 0.8912622028794754,
+   "participation_ratio": 239.71218872070312,
+   "dims_90pct": 450
+  },
+  "1500 BanglaMeta+ (current)": {
+   "dim": 1500,
+   "about": "current model",
+   "dev": {
+    "Overall": 0.7715548799684616,
+    "D1": 0.8837689595647988,
+    "D2": 0.6593408003721244,
+    "train_Overall": 0.8321999594267329,
+    "gap": 0.060645079458271245,
+    "alpha": {
+     "news_topic_7": 1000.0,
+     "review_sentiment_3": 10000.0,
+     "social_sentiment_3": 10000.0,
+     "hate_binary_2": 10000.0
+    },
+    "per_task": {
+     "news_topic_7": 0.8837689595647988,
+     "review_sentiment_3": 0.5777704962150192,
+     "social_sentiment_3": 0.5865420587982152,
+     "hate_binary_2": 0.8137098461031388
+    }
+   },
+   "conf": {
+    "Overall": 0.7715237177360394,
+    "D1": 0.8852403631532989,
+    "D2": 0.65780707231878,
+    "train_Overall": 0.8333577857603621,
+    "gap": 0.061834068024322675,
+    "alpha": {
+     "news_topic_7": 1000.0,
+     "review_sentiment_3": 10000.0,
+     "social_sentiment_3": 10000.0,
+     "hate_binary_2": 10000.0
+    },
+    "per_task": {
+     "news_topic_7": 0.8852403631532989,
+     "review_sentiment_3": 0.5860302797123147,
+     "social_sentiment_3": 0.5861233275936518,
+     "hate_binary_2": 0.8012676096503736
+    }
+   },
+   "analogy_all": 0.08981892313227005,
+   "analogy_tune": 0.09317663988487829,
+   "analogy_test": 0.08646120637966183,
+   "sim_auc": 0.8913121986954283,
+   "participation_ratio": 239.80564880371094,
+   "dims_90pct": 450
+  },
+  "1800 + sim-Informal (0.15)": {
+   "dim": 1800,
+   "about": "3 x 300 similarity blocks, Informal weighted 0.15",
+   "dev": {
+    "Overall": 0.771601903113523,
+    "D1": 0.8837543141495888,
+    "D2": 0.6594494920774571,
+    "train_Overall": 0.8377785873345969,
+    "gap": 0.06617668422107392,
+    "alpha": {
+     "news_topic_7": 1000.0,
+     "review_sentiment_3": 10000.0,
+     "social_sentiment_3": 10000.0,
+     "hate_binary_2": 10000.0
+    },
+    "per_task": {
+     "news_topic_7": 0.8837543141495888,
+     "review_sentiment_3": 0.5807970855676179,
+     "social_sentiment_3": 0.5807304521342785,
+     "hate_binary_2": 0.8168209385304751
+    }
+   },
+   "conf": {
+    "Overall": 0.7728742926063541,
+    "D1": 0.8849510386872186,
+    "D2": 0.6607975465254895,
+    "train_Overall": 0.8400608248929191,
+    "gap": 0.06718653228656501,
+    "alpha": {
+     "news_topic_7": 1000.0,
+     "review_sentiment_3": 10000.0,
+     "social_sentiment_3": 10000.0,
+     "hate_binary_2": 10000.0
+    },
+    "per_task": {
+     "news_topic_7": 0.8849510386872186,
+     "review_sentiment_3": 0.5911557699051789,
+     "social_sentiment_3": 0.5918073813489505,
+     "hate_binary_2": 0.7994294883223391
+    }
+   },
+   "analogy_all": 0.08861973857776712,
+   "analogy_tune": 0.0926969660630771,
+   "analogy_test": 0.08454251109245713,
+   "sim_auc": 0.8927689916730371,
+   "participation_ratio": 250.80047607421875,
+   "dims_90pct": 479
+  },
+  "1800 + sim equal weights": {
+   "dim": 1800,
+   "about": "3 x 300 similarity blocks, equal weights",
+   "dev": {
+    "Overall": 0.771601903113523,
+    "D1": 0.8837543141495888,
+    "D2": 0.6594494920774571,
+    "train_Overall": 0.8377785873345969,
+    "gap": 0.06617668422107392,
+    "alpha": {
+     "news_topic_7": 1000.0,
+     "review_sentiment_3": 10000.0,
+     "social_sentiment_3": 10000.0,
+     "hate_binary_2": 10000.0
+    },
+    "per_task": {
+     "news_topic_7": 0.8837543141495888,
+     "review_sentiment_3": 0.5807970855676179,
+     "social_sentiment_3": 0.5807304521342785,
+     "hate_binary_2": 0.8168209385304751
+    }
+   },
+   "conf": {
+    "Overall": 0.7728742926063541,
+    "D1": 0.8849510386872186,
+    "D2": 0.6607975465254895,
+    "train_Overall": 0.8400608248929191,
+    "gap": 0.06718653228656501,
+    "alpha": {
+     "news_topic_7": 1000.0,
+     "review_sentiment_3": 10000.0,
+     "social_sentiment_3": 10000.0,
+     "hate_binary_2": 10000.0
+    },
+    "per_task": {
+     "news_topic_7": 0.8849510386872186,
+     "review_sentiment_3": 0.5911557699051789,
+     "social_sentiment_3": 0.5918073813489505,
+     "hate_binary_2": 0.7994294883223391
+    }
+   },
+   "analogy_all": 0.06619498740856218,
+   "analogy_tune": 0.0694327857057201,
+   "analogy_test": 0.06295718911140424,
+   "sim_auc": 0.8817699121633792,
+   "participation_ratio": 184.69247436523438,
+   "dims_90pct": 540
+  },
+  "300 PCA of BanglaMeta+": {
+   "dim": 300,
+   "about": "BanglaMeta+ compressed to 300 principal directions",
+   "dev": {
+    "Overall": 0.7540351813826348,
+    "D1": 0.8756244409513576,
+    "D2": 0.632445921813912,
+    "train_Overall": 0.8173520272680009,
+    "gap": 0.06331684588536612,
+    "alpha": {
+     "news_topic_7": 316.22776601683796,
+     "review_sentiment_3": 3162.2776601683795,
+     "social_sentiment_3": 1000.0,
+     "hate_binary_2": 1000.0
+    },
+    "per_task": {
+     "news_topic_7": 0.8756244409513576,
+     "review_sentiment_3": 0.563652196715569,
+     "social_sentiment_3": 0.5436463582143977,
+     "hate_binary_2": 0.7900392105117694
+    }
+   },
+   "conf": {
+    "Overall": 0.7544405103191115,
+    "D1": 0.8801452148646269,
+    "D2": 0.6287358057735961,
+    "train_Overall": 0.8193168356794069,
+    "gap": 0.06487632536029542,
+    "alpha": {
+     "news_topic_7": 316.22776601683796,
+     "review_sentiment_3": 3162.2776601683795,
+     "social_sentiment_3": 1000.0,
+     "hate_binary_2": 1000.0
+    },
+    "per_task": {
+     "news_topic_7": 0.8801452148646269,
+     "review_sentiment_3": 0.5608035779981413,
+     "social_sentiment_3": 0.5436845358251668,
+     "hate_binary_2": 0.7817193034974804
+    }
+   },
+   "analogy_all": 0.091018107686773,
+   "analogy_tune": 0.09329655834032857,
+   "analogy_test": 0.08873965703321741,
+   "sim_auc": 0.8878057545538742,
+   "participation_ratio": 149.66464233398438,
+   "dims_90pct": 236
+  },
+  "500 PCA of BanglaMeta+": {
+   "dim": 500,
+   "about": "BanglaMeta+ compressed to 500 principal directions",
+   "dev": {
+    "Overall": 0.7569500475561045,
+    "D1": 0.8779778688767765,
+    "D2": 0.6359222262354325,
+    "train_Overall": 0.8321163590912821,
+    "gap": 0.07516631153517761,
+    "alpha": {
+     "news_topic_7": 1000.0,
+     "review_sentiment_3": 3162.2776601683795,
+     "social_sentiment_3": 3162.2776601683795,
+     "hate_binary_2": 3162.2776601683795
+    },
+    "per_task": {
+     "news_topic_7": 0.8779778688767765,
+     "review_sentiment_3": 0.5685723107969353,
+     "social_sentiment_3": 0.5425824243917717,
+     "hate_binary_2": 0.7966119435175905
+    }
+   },
+   "conf": {
+    "Overall": 0.7577381673565492,
+    "D1": 0.8796577026621728,
+    "D2": 0.6358186320509256,
+    "train_Overall": 0.8337668937336848,
+    "gap": 0.07602872637713565,
+    "alpha": {
+     "news_topic_7": 1000.0,
+     "review_sentiment_3": 3162.2776601683795,
+     "social_sentiment_3": 3162.2776601683795,
+     "hate_binary_2": 3162.2776601683795
+    },
+    "per_task": {
+     "news_topic_7": 0.8796577026621728,
+     "review_sentiment_3": 0.5736189049172817,
+     "social_sentiment_3": 0.5405354466991054,
+     "hate_binary_2": 0.7933015445363896
+    }
+   },
+   "analogy_all": 0.09053843386497182,
+   "analogy_tune": 0.09293680297397769,
+   "analogy_test": 0.08814006475596595,
+   "sim_auc": 0.886845107998054,
+   "participation_ratio": 215.57225036621094,
+   "dims_90pct": 389
+  }
+ },
+ "learning_curves": {
+  "600 similarity view only": {
+   "0.1": {
+    "Overall": 0.7136578724601477,
+    "train_Overall": 0.9203817791035562
+   },
+   "0.25": {
+    "Overall": 0.7394610924049067,
+    "train_Overall": 0.8843331047891301
+   },
+   "0.5": {
+    "Overall": 0.7511950509021301,
+    "train_Overall": 0.8397929225214663
+   },
+   "0.75": {
+    "Overall": 0.7571310259699318,
+    "train_Overall": 0.8296193959566951
+   },
+   "1.0": {
+    "Overall": 0.7624992676202115,
+    "train_Overall": 0.8264041616671018
+   }
+  },
+  "900 thesis (BanglaMeta)": {
+   "0.1": {
+    "Overall": 0.7254773263780611,
+    "train_Overall": 0.9180604795238518
+   },
+   "0.25": {
+    "Overall": 0.7515006189868556,
+    "train_Overall": 0.8768269839982585
+   },
+   "0.5": {
+    "Overall": 0.7600632353156165,
+    "train_Overall": 0.8551065242771383
+   },
+   "0.75": {
+    "Overall": 0.7662519082429872,
+    "train_Overall": 0.8436557071136099
+   },
+   "1.0": {
+    "Overall": 0.7712139949694425,
+    "train_Overall": 0.8356178397259231
+   }
+  },
+  "1500 BanglaMeta+ (current)": {
+   "0.1": {
+    "Overall": 0.7283430113354648,
+    "train_Overall": 0.9375329373549659
+   },
+   "0.25": {
+    "Overall": 0.7534204410067773,
+    "train_Overall": 0.902487830816862
+   },
+   "0.5": {
+    "Overall": 0.7594928999793489,
+    "train_Overall": 0.8537106792633419
+   },
+   "0.75": {
+    "Overall": 0.766804707047684,
+    "train_Overall": 0.83759856269577
+   },
+   "1.0": {
+    "Overall": 0.7715548799684616,
+    "train_Overall": 0.8321999594267329
+   }
+  },
+  "1800 + sim equal weights": {
+   "0.1": {
+    "Overall": 0.727494856245716,
+    "train_Overall": 0.9380881608468821
+   },
+   "0.25": {
+    "Overall": 0.7512222810254425,
+    "train_Overall": 0.8887463290250965
+   },
+   "0.5": {
+    "Overall": 0.7603523310475179,
+    "train_Overall": 0.8536185159567681
+   },
+   "0.75": {
+    "Overall": 0.7662524721762343,
+    "train_Overall": 0.844966071829399
+   },
+   "1.0": {
+    "Overall": 0.771601903113523,
+    "train_Overall": 0.8377785873345969
+   }
+  }
+ },
+ "sources": {
+  "Informal-W2V": {
+   "corpus_tokens": 3192884,
+   "vocab": 32910,
+   "dims": 300,
+   "learned_parameters": 19746000,
+   "tokens_per_parameter": 0.16169776157196394,
+   "occurrences_per_word_median": 12.0,
+   "share_words_lt_20": 0.6389851109085385,
+   "share_words_lt_50": 0.8190215739896688,
+   "share_tokens_by_words_lt_20": 0.060147189813347435
+  },
+  "News-W2V": {
+   "corpus_tokens": 65324912,
+   "vocab": 187686,
+   "dims": 300,
+   "learned_parameters": 112611600,
+   "tokens_per_parameter": 0.5800904347331891,
+   "occurrences_per_word_median": 15.0,
+   "share_words_lt_20": 0.5657161429195572,
+   "share_words_lt_50": 0.740982278912652,
+   "share_tokens_by_words_lt_20": 0.014953345823106505
+  },
+  "Subs2vec-w2": {
+   "corpus_tokens": null,
+   "vocab": 177376,
+   "dims": 300,
+   "note": "downloaded (OpenSubtitles 2018); corpus size not published in the record"
+  }
+ },
+ "frequency_bands": {
+  "News-W2V": {
+   "0k-5k": 0.05847953216374269,
+   "5k-20k": 0.07529064403026389,
+   "20k-50k": 0.06606890042472864,
+   "50k-200k": 0.10336871250576835,
+   "questions": {
+    "0k-5k": 4617,
+    "5k-20k": 5419,
+    "20k-50k": 2119,
+    "50k-200k": 2167
+   }
+  },
+  "Informal-W2V": {
+   "0k-5k": 0.01299545159194282,
+   "5k-20k": 0.009226794611551946,
+   "20k-50k": 0.011326097215667769,
+   "50k-200k": 0.00046146746654360867,
+   "questions": {
+    "0k-5k": 4617,
+    "5k-20k": 5419,
+    "20k-50k": 2119,
+    "50k-200k": 2167
+   }
+  },
+  "fastText-cc.bn": {
+   "0k-5k": 0.11197747455057397,
+   "5k-20k": 0.042812326997601034,
+   "20k-50k": 0.10523831996224635,
+   "50k-200k": 0.11628980156898938,
+   "questions": {
+    "0k-5k": 4617,
+    "5k-20k": 5419,
+    "20k-50k": 2119,
+    "50k-200k": 2167
+   }
+  },
+  "BanglaMeta": {
+   "0k-5k": 0.0632445310807884,
+   "5k-20k": 0.08267207971950544,
+   "20k-50k": 0.04058518168947617,
+   "50k-200k": 0.08075680664513152,
+   "questions": {
+    "0k-5k": 4617,
+    "5k-20k": 5419,
+    "20k-50k": 2119,
+    "50k-200k": 2167
+   }
+  },
+  "BanglaMeta-Sim": {
+   "0k-5k": 0.10353043101581114,
+   "5k-20k": 0.12179368887248569,
+   "20k-50k": 0.07126002831524304,
+   "50k-200k": 0.09690816797415783,
+   "questions": {
+    "0k-5k": 4617,
+    "5k-20k": 5419,
+    "20k-50k": 2119,
+    "50k-200k": 2167
+   }
+  },
+  "BanglaMeta+": {
+   "0k-5k": 0.10353043101581114,
+   "5k-20k": 0.12142461708802361,
+   "20k-50k": 0.07126002831524304,
+   "50k-200k": 0.09736963544070143,
+   "questions": {
+    "0k-5k": 4617,
+    "5k-20k": 5419,
+    "20k-50k": 2119,
+    "50k-200k": 2167
+   }
+  }
+ },
+ "source_effective_dims": {
+  "News-W2V": {
+   "participation_ratio": 161.59555053710938,
+   "dims_90pct": 232
+  },
+  "Informal-W2V": {
+   "participation_ratio": 36.39921188354492,
+   "dims_90pct": 110
+  },
+  "fastText-cc.bn": {
+   "participation_ratio": 197.0250244140625,
+   "dims_90pct": 248
+  }
+ },
+ "notes": {
+  "conf": "CONF for new variants is exploratory",
+  "selection": "D, block weights and eps were chosen on the analogy TUNE half"
+ }
+}

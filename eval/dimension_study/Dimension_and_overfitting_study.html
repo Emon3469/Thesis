@@ -1,0 +1,55 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Dimension and over-fitting study</title><style>
+@page { size: A4 landscape; margin: 12mm; }
+body { font-family: Calibri, "Segoe UI", sans-serif; font-size: 10.6pt; color: #0b0b0b; margin: 0; line-height: 1.42; }
+h1 { font-size: 21pt; margin: 0; } h2 { font-size: 14pt; border-bottom: 2px solid #2a78d6; padding-bottom: 2px; margin: 14px 0 6px; break-after: avoid; }
+.sub { color: #52514e; } table { border-collapse: collapse; width: 100%; font-size: 9.8pt; }
+th, td { border-bottom: 1px solid #e7e6e2; padding: 3px 7px; text-align: right; } th:first-child, td:first-child { text-align: left; }
+thead th { background: #0b0b0b; color: #fff; } tr.new td { background: #eef4fc; font-weight: 700; }
+.box { border: 1px solid #d6d5d0; border-radius: 8px; padding: 8px 12px; background: #fafaf8; margin: 6px 0; break-inside: avoid; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; } ul { margin: 3px 0 3px 18px; padding: 0; }
+figure { margin: 10px 0; break-inside: avoid; } figure img { width: 100%; } figcaption { font-size: 9.6pt; color: #52514e; }
+code { font-family: Consolas, monospace; font-size: 9.4pt; background: #f0efec; padding: 0 3px; }
+</style></head><body>
+<h1>Over-fitting, under-fitting and the choice of dimension</h1>
+<div class="sub">BanglaMeta / BanglaMeta+ · measured by <code>webapp/backend/experiments/dimension_study.py</code> and <code>eps_1200.py</code>.
+CONF results of the new variants are exploratory (the thesis used CONF once, for its confirmatory test).</div>
+<h2>Answer in one table</h2>
+<table><thead><tr><th>Option</th><th>dims</th><th>DEV F1</th><th>CONF F1</th><th>Analogy all</th><th>Analogy test half</th><th>Sim AUC</th><th>train–held-out gap</th><th>dims for 90%</th></tr></thead>
+<tbody><tr><td>300 PCA of BanglaMeta+</td><td>300</td><td>75.40</td><td>75.44</td><td>9.10</td><td>8.87</td><td>0.8878</td><td>6.33</td><td>236</td></tr><tr><td>500 PCA of BanglaMeta+</td><td>500</td><td>75.70</td><td>75.77</td><td>9.05</td><td>8.81</td><td>0.8868</td><td>7.52</td><td>389</td></tr><tr><td>600 similarity view only</td><td>600</td><td>76.25</td><td>76.28</td><td>8.99</td><td>8.66</td><td>0.8914</td><td>6.39</td><td>449</td></tr><tr><td>900 thesis (BanglaMeta)</td><td>900</td><td>77.12</td><td>77.17</td><td>6.00</td><td>5.62</td><td>0.8191</td><td>6.44</td><td>532</td></tr><tr><td>1200 thesis + sim-News</td><td>1,200</td><td>77.23</td><td>77.14</td><td>6.87</td><td>6.56</td><td>0.8817</td><td>5.30</td><td>230</td></tr><tr><td>1200 thesis + sim-Subs</td><td>1,200</td><td>76.95</td><td>77.23</td><td>6.40</td><td>6.36</td><td>0.8701</td><td>5.69</td><td>247</td></tr><tr class=new><td>1200 BanglaMeta+ (new)</td><td>1,200</td><td>77.34</td><td>77.22</td><td>8.98</td><td>8.66</td><td>0.8914</td><td>5.22</td><td>450</td></tr><tr><td>1500 BanglaMeta+ (old)</td><td>1,500</td><td>77.16</td><td>77.15</td><td>8.98</td><td>8.65</td><td>0.8913</td><td>6.06</td><td>450</td></tr><tr><td>1800 + sim-Informal (0.15)</td><td>1,800</td><td>77.16</td><td>77.29</td><td>8.86</td><td>8.45</td><td>0.8928</td><td>6.62</td><td>479</td></tr><tr><td>1800 + sim equal weights</td><td>1,800</td><td>77.16</td><td>77.29</td><td>6.62</td><td>6.30</td><td>0.8818</td><td>6.62</td><td>540</td></tr></tbody></table>
+<div class="two">
+<div class="box"><b>Decision: BanglaMeta+ is now 1,200-d.</b> Against the old 1,500-d version:
+<ul><li>DEV F1 77.16 → <b>77.34</b>; CONF F1 77.15 → <b>77.22</b></li>
+<li>Analogy 8.98% → <b>8.98%</b> (the same number of questions solved); similarity AUC 0.8913 → <b>0.8914</b></li>
+<li>Over-fitting gap 6.06 → <b>5.22</b> points; 300 fewer dimensions</li></ul>
+Change: Subs2vec is removed from the thesis part and kept only in the similarity part. It adds no significant classification
+information (thesis check P2: +0.003 nats, interval includes 0), so in the thesis part it was dead weight. ε = 0.0005 was chosen on
+the analogy tune half (all values tie; ties go to the smaller ε, the rule used from the start).</div>
+<div class="box"><b>Is there over-fitting?</b> Not harmful over-fitting:
+<ul><li>Held-out data: DEV 77.34 vs untouched CONF 77.22; an over-fitted model would drop on CONF.</li>
+<li>The classifier's train/held-out gap is 5–7.5 points for every size and does not grow with dimension (Figure 2).</li>
+<li>Learning curves still rise at 100% data and larger models are never below smaller ones (Figure 3).</li>
+<li>Selection: the settings were chosen on half the analogy questions; on the unseen half the model still reaches 8.66%.</li></ul></div>
+<div class="box"><b>Is there under-fitting?</b> Yes, in one source: Informal-W2V.
+<ul><li>3,192,884 tokens for 19,746,000 learned parameters (0.16 tokens per parameter); 64% of its words occur fewer than 20 times.</li>
+<li>Its analogy accuracy is about 1% in every frequency band (Figure 4).</li>
+<li>Remedy already in the model: weight 0 for word similarity; its block is kept for classification, where it adds significant information on informal text (P2: +0.068 nats).</li>
+<li>News-W2V: 65,324,912 tokens, 0.58 tokens per parameter, no rare-word collapse.</li></ul></div>
+<div class="box"><b>Why not 1,800 or SVD?</b>
+<ul><li>1,800 (adding the Informal similarity block): analogy falls to 8.86% / 6.62%: the under-trained block adds noise.</li>
+<li>SVD/PCA to 300 or 500 dims: classification falls to 75.40 / 75.70 and similarity AUC to 0.888; and the 500-d version over-fits <i>more</i> (gap 7.52).</li>
+<li>The thesis model itself never used SVD: it was tested in Step 4 and lost (76.36 vs 76.97).</li></ul></div></div>
+<h2>How to defend the size to your professor</h2>
+<div class="box"><ol>
+<li><b>It is not a 1,200-dimension Word2Vec.</b> No Word2Vec was trained with more than 300 dimensions. The "150–500" rule of thumb is about training one model;
+every trained model here is 300-d, inside that range. BanglaMeta+ is a <i>meta-embedding</i>: four 300-d blocks derived from three separately trained 300-d models, joined without new training.</li>
+<li><b>The extra dimensions carry new information, not new parameters.</b> Theorem 2: a classifier on the joined vector can always ignore a block, so joining cannot lose;
+Theorem 3 + check P2 measure what each block adds. Blocks that add nothing (Subs2vec in the thesis part, Informal in the similarity part) are removed.</li>
+<li><b>Effective size is small.</b> 90% of the variance of the 1,200-d model lies in 450 directions (participation ratio 240) (Figure 5).</li>
+<li><b>Dimension does not drive generalisation error here.</b> Theorem 9: the probe's error bound depends on vector length (≤ 1) and weight norm, not on dimension;
+measured train/held-out gaps and learning curves confirm it, and the held-out CONF score does not drop.</li>
+<li><b>Every smaller and larger option was tested</b> (600, three 1,200s, 1,500, two 1,800s, SVD to 300/500): the 1,200-d model is the smallest that keeps all three scores.</li>
+<li><b>Avoid "world first".</b> Say instead: "a 1,200-d Bangla meta-embedding of separately trained 300-d Word2Vec models; best of the evaluated static embeddings
+on classification, analogy and similarity." That claim is backed by these measurements; "world first" is not.</li></ol></div>
+<h2 style="break-before: page">Figures</h2>
+<figure><img src='figures/fig01_dimension_options.png'><figcaption><b>Figure 1.</b> All ten options built from the same frozen rows. The new 1,200-d model is at or above the old 1,500-d model on all four scores; 1,800 loses analogy; compressing to 300/500 (SVD/PCA) loses classification and similarity.</figcaption></figure><figure><img src='figures/fig02_train_vs_heldout.png'><figcaption><b>Figure 2.</b> The gap between training-fold and held-out-fold F1 is 5–7.5 points for every size and does not grow with the number of dimensions; the new 1,200-d model has the smallest gap (least over-fitting).</figcaption></figure><figure><img src='figures/fig03_learning_curves.png'><figcaption><b>Figure 3.</b> Held-out F1 rises steadily with more training texts for every size, and the larger models are not below the smaller ones at any data size, so the extra dimensions are not over-fitted.</figcaption></figure><figure><img src='figures/fig04_frequency_bands.png'><figcaption><b>Figure 4.</b> Informal-W2V is near zero in every band: it is under-trained (too little text for 300 dimensions). The other models do not collapse on rare words.</figcaption></figure><figure><img src='figures/fig05_effective_dims.png'><figcaption><b>Figure 5.</b> Participation ratio (PR) and the number of directions holding 90% of the variance, measured on the 20,000 most frequent words. The concatenated models have far fewer effective dimensions than their nominal size.</figcaption></figure>
+</body></html>

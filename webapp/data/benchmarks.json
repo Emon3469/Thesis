@@ -1,0 +1,936 @@
+{
+ "created": "2026-11-19 02:18:01",
+ "seconds": 507.7,
+ "served_md5": {
+  "merged_plus": "fd1fd540557ed9a9a6e64232bdaf8774",
+  "merged": "0040863c623a000f3aadda5b87e875ca",
+  "merged_sim": "afdfcdb981e66a3df0ac3c45ed534662",
+  "fasttext": "473444254e2966675d19024f08a58bdd",
+  "news": "69e787ee9cac39c074f485a1f66cc6be",
+  "informal": "9793d2b6661f1f9a0b144701354543b9"
+ },
+ "results": {
+  "merged_plus": {
+   "tok_cov_D1": 0.9866372330075535,
+   "type_cov_D1": 0.8209325753759804,
+   "tok_cov_D2": 0.9489503323399174,
+   "type_cov_D2": 0.7643444516307862,
+   "analogy_native_acc": 0.08981892313227005,
+   "analogy_native_answerable": 0.7264660031178798,
+   "analogy_semantic_acc": 0.07803812549642573,
+   "analogy_semantic_answerable": 0.6795075456711676,
+   "analogy_syntactic_acc": 0.0949149630647655,
+   "analogy_syntactic_answerable": 0.7467789039683903,
+   "analogy_mikolov_acc": 0.11270530488956013,
+   "analogy_mikolov_answerable": 0.7166320558806872,
+   "analogy_questions": 16678,
+   "analogy_per_file": {
+    "Affix_বিভক্তি": [
+     38,
+     30,
+     2
+    ],
+    "Antonym_Adjective": [
+     4692,
+     4422,
+     556
+    ],
+    "Antonym_Misc": [
+     3782,
+     2862,
+     397
+    ],
+    "Comparative": [
+     552,
+     72,
+     4
+    ],
+    "Division_District": [
+     2160,
+     2072,
+     219
+    ],
+    "Gender": [
+     1260,
+     756,
+     153
+    ],
+    "Mikolov-Filtered": [
+     10594,
+     7592,
+     1194
+    ],
+    "Number_Date": [
+     930,
+     156,
+     3
+    ],
+    "Number_Female": [
+     306,
+     132,
+     0
+    ],
+    "Number_Ordinal": [
+     380,
+     306,
+     18
+    ],
+    "Plural_Noun": [
+     506,
+     380,
+     52
+    ],
+    "Plural_Object": [
+     72,
+     42,
+     2
+    ],
+    "Prefix_উপসর্গ": [
+     66,
+     36,
+     0
+    ],
+    "Suffix_নির্দেশক": [
+     34,
+     18,
+     0
+    ],
+    "Suffix_প্রত্যয়": [
+     60,
+     26,
+     0
+    ],
+    "Superlative": [
+     600,
+     132,
+     13
+    ],
+    "Tense": [
+     144,
+     84,
+     3
+    ],
+    "সাধু_চলিত_conj": [
+     182,
+     156,
+     36
+    ],
+    "সাধু_চলিত_noun": [
+     342,
+     272,
+     33
+    ],
+    "সাধু_চলিত_pronoun": [
+     110,
+     90,
+     3
+    ],
+    "সাধু_চলিত_verb": [
+     462,
+     72,
+     4
+    ]
+   },
+   "sim_auc_common": 0.8914286783091913,
+   "sim_common_words": 124,
+   "F1_news_topic_7": 0.8834633961643902,
+   "empty_news_topic_7": 0,
+   "F1_review_sentiment_3": 0.5839608574176122,
+   "empty_review_sentiment_3": 0,
+   "F1_social_sentiment_3": 0.5929753756268541,
+   "empty_social_sentiment_3": 2,
+   "F1_hate_binary_2": 0.8131825820971149,
+   "empty_hate_binary_2": 1,
+   "D1_F1": 0.8834633961643902,
+   "D2_F1": 0.663372938380527,
+   "Overall_F1": 0.7734181672724586,
+   "conf_F1_news_topic_7": 0.8861280506553173,
+   "conf_F1_review_sentiment_3": 0.5833628217458547,
+   "conf_F1_social_sentiment_3": 0.5911334204991848,
+   "conf_F1_hate_binary_2": 0.8003764330120344,
+   "conf_D1_F1": 0.8861280506553173,
+   "conf_D2_F1": 0.658290891752358,
+   "conf_Overall_F1": 0.7722094712038376
+  },
+  "merged": {
+   "tok_cov_D1": 0.9866372330075535,
+   "type_cov_D1": 0.8209325753759804,
+   "tok_cov_D2": 0.9489503323399174,
+   "type_cov_D2": 0.7643444516307862,
+   "analogy_native_acc": 0.06001918695287205,
+   "analogy_native_answerable": 0.7264660031178798,
+   "analogy_semantic_acc": 0.0653296266878475,
+   "analogy_semantic_answerable": 0.6795075456711676,
+   "analogy_syntactic_acc": 0.05772204088644563,
+   "analogy_syntactic_answerable": 0.7467789039683903,
+   "analogy_mikolov_acc": 0.07315461582027563,
+   "analogy_mikolov_answerable": 0.7166320558806872,
+   "analogy_questions": 16678,
+   "analogy_per_file": {
+    "Affix_বিভক্তি": [
+     38,
+     30,
+     3
+    ],
+    "Antonym_Adjective": [
+     4692,
+     4422,
+     322
+    ],
+    "Antonym_Misc": [
+     3782,
+     2862,
+     260
+    ],
+    "Comparative": [
+     552,
+     72,
+     3
+    ],
+    "Division_District": [
+     2160,
+     2072,
+     189
+    ],
+    "Gender": [
+     1260,
+     756,
+     114
+    ],
+    "Mikolov-Filtered": [
+     10594,
+     7592,
+     775
+    ],
+    "Number_Date": [
+     930,
+     156,
+     3
+    ],
+    "Number_Female": [
+     306,
+     132,
+     1
+    ],
+    "Number_Ordinal": [
+     380,
+     306,
+     22
+    ],
+    "Plural_Noun": [
+     506,
+     380,
+     24
+    ],
+    "Plural_Object": [
+     72,
+     42,
+     1
+    ],
+    "Prefix_উপসর্গ": [
+     66,
+     36,
+     1
+    ],
+    "Suffix_নির্দেশক": [
+     34,
+     18,
+     0
+    ],
+    "Suffix_প্রত্যয়": [
+     60,
+     26,
+     0
+    ],
+    "Superlative": [
+     600,
+     132,
+     6
+    ],
+    "Tense": [
+     144,
+     84,
+     5
+    ],
+    "সাধু_চলিত_conj": [
+     182,
+     156,
+     19
+    ],
+    "সাধু_চলিত_noun": [
+     342,
+     272,
+     23
+    ],
+    "সাধু_চলিত_pronoun": [
+     110,
+     90,
+     3
+    ],
+    "সাধু_চলিত_verb": [
+     462,
+     72,
+     2
+    ]
+   },
+   "sim_auc_common": 0.8190989158354125,
+   "sim_common_words": 124,
+   "F1_news_topic_7": 0.8823086901977665,
+   "empty_news_topic_7": 0,
+   "F1_review_sentiment_3": 0.5893228569364857,
+   "empty_review_sentiment_3": 0,
+   "F1_social_sentiment_3": 0.5787632368321393,
+   "empty_social_sentiment_3": 2,
+   "F1_hate_binary_2": 0.8122718054547303,
+   "empty_hate_binary_2": 1,
+   "D1_F1": 0.8823086901977665,
+   "D2_F1": 0.6601192997411185,
+   "Overall_F1": 0.7712139949694425,
+   "conf_F1_news_topic_7": 0.8839977350508537,
+   "conf_F1_review_sentiment_3": 0.5969086820276158,
+   "conf_F1_social_sentiment_3": 0.5895736923473055,
+   "conf_F1_hate_binary_2": 0.7919008174440885,
+   "conf_D1_F1": 0.8839977350508537,
+   "conf_D2_F1": 0.65946106393967,
+   "conf_Overall_F1": 0.7717293994952619
+  },
+  "merged_sim": {
+   "tok_cov_D1": 0.9866372330075535,
+   "type_cov_D1": 0.8209325753759804,
+   "tok_cov_D2": 0.9489503323399174,
+   "type_cov_D2": 0.7643444516307862,
+   "analogy_native_acc": 0.08987888235999521,
+   "analogy_native_answerable": 0.7264660031178798,
+   "analogy_semantic_acc": 0.07803812549642573,
+   "analogy_semantic_answerable": 0.6795075456711676,
+   "analogy_syntactic_acc": 0.09500085895894177,
+   "analogy_syntactic_answerable": 0.7467789039683903,
+   "analogy_mikolov_acc": 0.11270530488956013,
+   "analogy_mikolov_answerable": 0.7166320558806872,
+   "analogy_questions": 16678,
+   "analogy_per_file": {
+    "Affix_বিভক্তি": [
+     38,
+     30,
+     2
+    ],
+    "Antonym_Adjective": [
+     4692,
+     4422,
+     557
+    ],
+    "Antonym_Misc": [
+     3782,
+     2862,
+     397
+    ],
+    "Comparative": [
+     552,
+     72,
+     4
+    ],
+    "Division_District": [
+     2160,
+     2072,
+     219
+    ],
+    "Gender": [
+     1260,
+     756,
+     153
+    ],
+    "Mikolov-Filtered": [
+     10594,
+     7592,
+     1194
+    ],
+    "Number_Date": [
+     930,
+     156,
+     3
+    ],
+    "Number_Female": [
+     306,
+     132,
+     0
+    ],
+    "Number_Ordinal": [
+     380,
+     306,
+     18
+    ],
+    "Plural_Noun": [
+     506,
+     380,
+     52
+    ],
+    "Plural_Object": [
+     72,
+     42,
+     2
+    ],
+    "Prefix_উপসর্গ": [
+     66,
+     36,
+     0
+    ],
+    "Suffix_নির্দেশক": [
+     34,
+     18,
+     0
+    ],
+    "Suffix_প্রত্যয়": [
+     60,
+     26,
+     0
+    ],
+    "Superlative": [
+     600,
+     132,
+     13
+    ],
+    "Tense": [
+     144,
+     84,
+     3
+    ],
+    "সাধু_চলিত_conj": [
+     182,
+     156,
+     36
+    ],
+    "সাধু_চলিত_noun": [
+     342,
+     272,
+     33
+    ],
+    "সাধু_চলিত_pronoun": [
+     110,
+     90,
+     3
+    ],
+    "সাধু_চলিত_verb": [
+     462,
+     72,
+     4
+    ]
+   },
+   "sim_auc_common": 0.8914459640966216,
+   "sim_common_words": 124,
+   "F1_news_topic_7": 0.877889303511237,
+   "empty_news_topic_7": 0,
+   "F1_review_sentiment_3": 0.5768205856615998,
+   "empty_review_sentiment_3": 0,
+   "F1_social_sentiment_3": 0.5611943590582005,
+   "empty_social_sentiment_3": 2,
+   "F1_hate_binary_2": 0.8033127504677579,
+   "empty_hate_binary_2": 1,
+   "D1_F1": 0.877889303511237,
+   "D2_F1": 0.647109231729186,
+   "Overall_F1": 0.7624992676202115,
+   "conf_F1_news_topic_7": 0.8838895860456714,
+   "conf_F1_review_sentiment_3": 0.5652043101966279,
+   "conf_F1_social_sentiment_3": 0.5598116960757505,
+   "conf_F1_hate_binary_2": 0.8004118485664502,
+   "conf_D1_F1": 0.8838895860456714,
+   "conf_D2_F1": 0.6418092849462762,
+   "conf_Overall_F1": 0.7628494354959738
+  },
+  "fasttext": {
+   "tok_cov_D1": 0.9860771729977854,
+   "type_cov_D1": 0.8367273512268835,
+   "tok_cov_D2": 0.9608431186364191,
+   "type_cov_D2": 0.8255104869259909,
+   "analogy_native_acc": 0.0756685453891354,
+   "analogy_native_answerable": 0.7800695527041611,
+   "analogy_semantic_acc": 0.0409054805401112,
+   "analogy_semantic_answerable": 0.7005559968228753,
+   "analogy_syntactic_acc": 0.09070606425012884,
+   "analogy_syntactic_answerable": 0.8144648685792819,
+   "analogy_mikolov_acc": 0.09911270530488955,
+   "analogy_mikolov_answerable": 0.6306399848971116,
+   "analogy_questions": 16678,
+   "analogy_per_file": {
+    "Affix_বিভক্তি": [
+     38,
+     32,
+     11
+    ],
+    "Antonym_Adjective": [
+     4692,
+     4422,
+     511
+    ],
+    "Antonym_Misc": [
+     3782,
+     3306,
+     286
+    ],
+    "Comparative": [
+     552,
+     90,
+     21
+    ],
+    "Division_District": [
+     2160,
+     2160,
+     27
+    ],
+    "Gender": [
+     1260,
+     650,
+     125
+    ],
+    "Mikolov-Filtered": [
+     10594,
+     6681,
+     1050
+    ],
+    "Number_Date": [
+     930,
+     182,
+     34
+    ],
+    "Number_Female": [
+     306,
+     156,
+     2
+    ],
+    "Number_Ordinal": [
+     380,
+     380,
+     18
+    ],
+    "Plural_Noun": [
+     506,
+     380,
+     45
+    ],
+    "Plural_Object": [
+     72,
+     56,
+     2
+    ],
+    "Prefix_উপসর্গ": [
+     66,
+     38,
+     1
+    ],
+    "Suffix_নির্দেশক": [
+     34,
+     24,
+     0
+    ],
+    "Suffix_প্রত্যয়": [
+     60,
+     30,
+     2
+    ],
+    "Superlative": [
+     600,
+     132,
+     20
+    ],
+    "Tense": [
+     144,
+     92,
+     13
+    ],
+    "সাধু_চলিত_conj": [
+     182,
+     156,
+     39
+    ],
+    "সাধু_চলিত_noun": [
+     342,
+     342,
+     33
+    ],
+    "সাধু_চলিত_pronoun": [
+     110,
+     110,
+     8
+    ],
+    "সাধু_চলিত_verb": [
+     462,
+     272,
+     64
+    ]
+   },
+   "sim_auc_common": 0.8668544050923398,
+   "sim_common_words": 124,
+   "F1_news_topic_7": 0.879335215999573,
+   "empty_news_topic_7": 0,
+   "F1_review_sentiment_3": 0.5670972641963509,
+   "empty_review_sentiment_3": 0,
+   "F1_social_sentiment_3": 0.5711516152754618,
+   "empty_social_sentiment_3": 0,
+   "F1_hate_binary_2": 0.7957198906382816,
+   "empty_hate_binary_2": 1,
+   "D1_F1": 0.879335215999573,
+   "D2_F1": 0.6446562567033648,
+   "Overall_F1": 0.7619957363514689,
+   "conf_F1_news_topic_7": 0.8814579297338129,
+   "conf_F1_review_sentiment_3": 0.5738300857723361,
+   "conf_F1_social_sentiment_3": 0.5747977668389025,
+   "conf_F1_hate_binary_2": 0.7935851393188855,
+   "conf_D1_F1": 0.8814579297338129,
+   "conf_D2_F1": 0.6474043306433747,
+   "conf_Overall_F1": 0.7644311301885938
+  },
+  "news": {
+   "tok_cov_D1": 0.9850115789875454,
+   "type_cov_D1": 0.8002446571202417,
+   "tok_cov_D2": 0.9123506350653868,
+   "type_cov_D2": 0.675090085928116,
+   "analogy_native_acc": 0.06265739297277852,
+   "analogy_native_answerable": 0.6858136467202303,
+   "analogy_semantic_acc": 0.06175536139793487,
+   "analogy_semantic_answerable": 0.647736298649722,
+   "analogy_syntactic_acc": 0.06304758632537365,
+   "analogy_syntactic_answerable": 0.7022848307850885,
+   "analogy_mikolov_acc": 0.06550877855389843,
+   "analogy_mikolov_answerable": 0.534170285067019,
+   "analogy_questions": 16678,
+   "analogy_per_file": {
+    "Affix_বিভক্তি": [
+     38,
+     26,
+     3
+    ],
+    "Antonym_Adjective": [
+     4692,
+     4556,
+     408
+    ],
+    "Antonym_Misc": [
+     3782,
+     2550,
+     236
+    ],
+    "Comparative": [
+     552,
+     30,
+     1
+    ],
+    "Division_District": [
+     2160,
+     2072,
+     185
+    ],
+    "Gender": [
+     1260,
+     650,
+     105
+    ],
+    "Mikolov-Filtered": [
+     10594,
+     5659,
+     694
+    ],
+    "Number_Date": [
+     930,
+     210,
+     5
+    ],
+    "Number_Female": [
+     306,
+     90,
+     0
+    ],
+    "Number_Ordinal": [
+     380,
+     240,
+     16
+    ],
+    "Plural_Noun": [
+     506,
+     272,
+     47
+    ],
+    "Plural_Object": [
+     72,
+     42,
+     3
+    ],
+    "Prefix_উপসর্গ": [
+     66,
+     32,
+     0
+    ],
+    "Suffix_নির্দেশক": [
+     34,
+     20,
+     0
+    ],
+    "Suffix_প্রত্যয়": [
+     60,
+     26,
+     0
+    ],
+    "Superlative": [
+     600,
+     110,
+     6
+    ],
+    "Tense": [
+     144,
+     68,
+     1
+    ],
+    "সাধু_চলিত_conj": [
+     182,
+     90,
+     14
+    ],
+    "সাধু_চলিত_noun": [
+     342,
+     240,
+     11
+    ],
+    "সাধু_চলিত_pronoun": [
+     110,
+     72,
+     2
+    ],
+    "সাধু_চলিত_verb": [
+     462,
+     42,
+     2
+    ]
+   },
+   "sim_auc_common": 0.8809276067676606,
+   "sim_common_words": 124,
+   "F1_news_topic_7": 0.8742495838014287,
+   "empty_news_topic_7": 0,
+   "F1_review_sentiment_3": 0.5676558491941992,
+   "empty_review_sentiment_3": 1,
+   "F1_social_sentiment_3": 0.5591694627042848,
+   "empty_social_sentiment_3": 3,
+   "F1_hate_binary_2": 0.7411924765756671,
+   "empty_hate_binary_2": 7,
+   "D1_F1": 0.8742495838014287,
+   "D2_F1": 0.6226725961580505,
+   "Overall_F1": 0.7484610899797396,
+   "conf_F1_news_topic_7": 0.8790861175251494,
+   "conf_F1_review_sentiment_3": 0.5605803168032376,
+   "conf_F1_social_sentiment_3": 0.5650222118363901,
+   "conf_F1_hate_binary_2": 0.7231320364425108,
+   "conf_D1_F1": 0.8790861175251494,
+   "conf_D2_F1": 0.6162448550273796,
+   "conf_Overall_F1": 0.7476654862762645
+  },
+  "informal": {
+   "tok_cov_D1": 0.8385079814393465,
+   "type_cov_D1": 0.23938020196205417,
+   "tok_cov_D2": 0.9137984525275696,
+   "type_cov_D2": 0.6090732698882011,
+   "analogy_native_acc": 0.008094495742894831,
+   "analogy_native_answerable": 0.33625134908262383,
+   "analogy_semantic_acc": 0.0041699761715647335,
+   "analogy_semantic_answerable": 0.26806989674344717,
+   "analogy_syntactic_acc": 0.009792131936093455,
+   "analogy_syntactic_answerable": 0.36574471740250813,
+   "analogy_mikolov_acc": 0.004436473475552199,
+   "analogy_mikolov_answerable": 0.07721351708514253,
+   "analogy_questions": 16678,
+   "analogy_per_file": {
+    "Affix_বিভক্তি": [
+     38,
+     10,
+     0
+    ],
+    "Antonym_Adjective": [
+     4692,
+     2450,
+     40
+    ],
+    "Antonym_Misc": [
+     3782,
+     1406,
+     70
+    ],
+    "Comparative": [
+     552,
+     2,
+     0
+    ],
+    "Division_District": [
+     2160,
+     922,
+     2
+    ],
+    "Gender": [
+     1260,
+     240,
+     14
+    ],
+    "Mikolov-Filtered": [
+     10594,
+     818,
+     47
+    ],
+    "Number_Date": [
+     930,
+     6,
+     0
+    ],
+    "Number_Female": [
+     306,
+     0,
+     0
+    ],
+    "Number_Ordinal": [
+     380,
+     182,
+     5
+    ],
+    "Plural_Noun": [
+     506,
+     72,
+     1
+    ],
+    "Plural_Object": [
+     72,
+     2,
+     0
+    ],
+    "Prefix_উপসর্গ": [
+     66,
+     14,
+     0
+    ],
+    "Suffix_নির্দেশক": [
+     34,
+     6,
+     0
+    ],
+    "Suffix_প্রত্যয়": [
+     60,
+     8,
+     0
+    ],
+    "Superlative": [
+     600,
+     42,
+     0
+    ],
+    "Tense": [
+     144,
+     42,
+     1
+    ],
+    "সাধু_চলিত_conj": [
+     182,
+     90,
+     2
+    ],
+    "সাধু_চলিত_noun": [
+     342,
+     72,
+     0
+    ],
+    "সাধু_চলিত_pronoun": [
+     110,
+     30,
+     0
+    ],
+    "সাধু_চলিত_verb": [
+     462,
+     12,
+     0
+    ]
+   },
+   "sim_auc_common": 0.6920927007527029,
+   "sim_common_words": 124,
+   "F1_news_topic_7": 0.8154053062921094,
+   "empty_news_topic_7": 0,
+   "F1_review_sentiment_3": 0.5673754833846921,
+   "empty_review_sentiment_3": 0,
+   "F1_social_sentiment_3": 0.5679624203749251,
+   "empty_social_sentiment_3": 5,
+   "F1_hate_binary_2": 0.8008659928614691,
+   "empty_hate_binary_2": 1,
+   "D1_F1": 0.8154053062921094,
+   "D2_F1": 0.6454012988736954,
+   "Overall_F1": 0.7304033025829024,
+   "conf_F1_news_topic_7": 0.8072717900175487,
+   "conf_F1_review_sentiment_3": 0.5861857140917288,
+   "conf_F1_social_sentiment_3": 0.5996328243408482,
+   "conf_F1_hate_binary_2": 0.7879558948261238,
+   "conf_D1_F1": 0.8072717900175487,
+   "conf_D2_F1": 0.6579248110862336,
+   "conf_Overall_F1": 0.7325983005518911
+  }
+ },
+ "thesis": {
+  "merged": {
+   "tok_cov_D1": 0.9866372330075536,
+   "tok_cov_D2": 0.9489503323399174,
+   "analogy_native_acc": 0.060019186952872,
+   "analogy_semantic_acc": 0.0653296266878475,
+   "analogy_syntactic_acc": 0.0577220408864456,
+   "analogy_mikolov_acc": 0.0731546158202756,
+   "sim_auc_common": 0.8191003341564324,
+   "sim_common_words": 124.0,
+   "F1_news_topic_7": 0.8823086901977665,
+   "F1_review_sentiment_3": 0.5893228569364857,
+   "F1_social_sentiment_3": 0.5787632368321393,
+   "F1_hate_binary_2": 0.8122718054547303,
+   "D1_F1": 0.8823086901977665,
+   "D2_F1": 0.6601192997411185,
+   "Overall_F1": 0.7712139949694425
+  },
+  "fasttext": {
+   "tok_cov_D1": 0.9860771729977854,
+   "tok_cov_D2": 0.9608431186364192,
+   "analogy_native_acc": 0.0757285046168605,
+   "analogy_semantic_acc": 0.0409054805401112,
+   "analogy_syntactic_acc": 0.0907919601443051,
+   "analogy_mikolov_acc": 0.0990183122522182,
+   "sim_auc_common": 0.8668536072867661,
+   "sim_common_words": 124.0,
+   "F1_news_topic_7": 0.879335215999573,
+   "F1_review_sentiment_3": 0.5670972641963509,
+   "F1_social_sentiment_3": 0.5711516152754618,
+   "F1_hate_binary_2": 0.7957198906382816,
+   "D1_F1": 0.879335215999573,
+   "D2_F1": 0.6446562567033648,
+   "Overall_F1": 0.7619957363514689
+  },
+  "news": {
+   "tok_cov_D1": 0.9850115789875454,
+   "tok_cov_D2": 0.9123506350653868,
+   "analogy_native_acc": 0.0627173522005036,
+   "analogy_semantic_acc": 0.0619539316918189,
+   "analogy_syntactic_acc": 0.0630475863253736,
+   "analogy_mikolov_acc": 0.0656031716065697,
+   "sim_auc_common": 0.8809288477985531,
+   "sim_common_words": 124.0,
+   "F1_news_topic_7": 0.8742495838014287,
+   "F1_review_sentiment_3": 0.5676558491941992,
+   "F1_social_sentiment_3": 0.5591694627042848,
+   "F1_hate_binary_2": 0.7411924765756671,
+   "D1_F1": 0.8742495838014287,
+   "D2_F1": 0.6226725961580505,
+   "Overall_F1": 0.7484610899797396
+  },
+  "informal": {
+   "tok_cov_D1": 0.8385079814393465,
+   "tok_cov_D2": 0.9137984525275696,
+   "analogy_native_acc": 0.0080944957428948,
+   "analogy_semantic_acc": 0.0041699761715647,
+   "analogy_syntactic_acc": 0.0097921319360934,
+   "analogy_mikolov_acc": 0.0044364734755521,
+   "sim_auc_common": 0.6920957146848703,
+   "sim_common_words": 124.0,
+   "F1_news_topic_7": 0.8154053062921094,
+   "F1_review_sentiment_3": 0.5673754833846921,
+   "F1_social_sentiment_3": 0.5679624203749251,
+   "F1_hate_binary_2": 0.8008659928614691,
+   "D1_F1": 0.8154053062921094,
+   "D2_F1": 0.6454012988736954,
+   "Overall_F1": 0.7304033025829024
+  }
+ }
+}

@@ -1,0 +1,3 @@
+[     2s] variants: ['900 thesis (BanglaMeta)', '600 similarity view only', '1200 thesis + sim-News', '1200 thesis + sim-Subs', '1200 thesis(News+Inf) + sim', '1500 BanglaMeta+ (current)', '1800 + sim-Informal (0.15)', '1800 + sim equal weights', '300 PCA of BanglaMeta+', '500 PCA of BanglaMeta+']
+[     6s] part sentence vectors ready
+{"eps": 0.0005, "dev": 0.7734181672724586, "conf": 0.7722094712038376, "dev_D1": 0.8834633961643902, "dev_D2": 0.663372938380527, "conf_D1": 0.8861280506553173, "conf_D2": 0.658290891752358, "gap": 0.0522358919401994}
